@@ -1,12 +1,12 @@
 <?php
-        if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
+    if(isset($_POST('submit')))
     {
-        testFile();
+       testFile();
     }
     
 function testFile(){
     $TestFile = fopen("TestData.txt", "w") or die ("Unable to create file");
-    $txt = "Cowabunga \n";
+    $txt = "Oh man \n";
     fwrite($TestFile, $txt);
     fclose($TestFile);
     }
