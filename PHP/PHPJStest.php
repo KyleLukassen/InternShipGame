@@ -4,8 +4,5 @@ function testFile(){
     $txt = "Cowabunga \n";
     fwrite($TestFile, $txt);
     fclose($TestFile);
-    };
+    }
 ?>
-<script type="text/javascript">
-var x = "Something"
-</script>
