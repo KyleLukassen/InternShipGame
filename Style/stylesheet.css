@@ -2,6 +2,9 @@ body{
     background-color: #643302;
     margin: 0%;
     padding: 0%;
+    color: #e0a906;
+    font-family: "Apple Chancery", cursive;
+    font-style: italic;
 }
 .SideBar{
     grid-area: sidebar;
@@ -12,6 +15,8 @@ body{
     grid-area: header;
     height: 10vh;
     border-bottom: yellow 2px ridge;
+    font-size: 15px;
+    text-align: center;
 }
 #Gamescreen{
     grid-area: game;
