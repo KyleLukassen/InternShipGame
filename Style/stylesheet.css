@@ -1,0 +1,25 @@
+body{
+    background-color: #643302;
+    margin: 0%;
+    padding: 0%;
+}
+.SideBar{
+    float: left;
+    border-right: yellow 2px ridge;
+    width: 200px;
+    min-height: 100vh;
+    margin: 0%;
+    padding: 0%;
+}
+.SideBarBtns{
+    padding-top: 30vh;
+    padding-left: 50px;
+}
+.TitleArea{
+    height: 10vh;
+    border-bottom: yellow 2px ridge;
+}
+#Gamescreen{
+    float: left;
+    height: 90vh;
+}
