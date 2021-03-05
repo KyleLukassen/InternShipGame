@@ -11,6 +11,10 @@ body{
     margin: 0%;
     padding: 0%;
 }
+.SideBarBtns{
+    padding-top: 30vh;
+    padding-left: 50px;
+}
 #Gamescreen{
     float: left;
     height: 100vh;
