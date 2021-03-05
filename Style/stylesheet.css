@@ -4,22 +4,31 @@ body{
     padding: 0%;
 }
 .SideBar{
-    float: left;
-    border-right: yellow 2px ridge;
+    grid-area: sidebar;
     width: 200px;
-    min-height: 100vh;
-    margin: 0%;
-    padding: 0%;
-}
-.SideBarBtns{
-    padding-top: 30vh;
-    padding-left: 50px;
+    border-right: yellow 2px ridge;
 }
 .TitleArea{
+    grid-area: header;
     height: 10vh;
     border-bottom: yellow 2px ridge;
 }
 #Gamescreen{
-    float: left;
-    height: 90vh;
+    grid-area: game;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'sidebar header header header header'
+    'sidebar game game game game';
+    grid-gap: 0px;
+    padding: 0px;
+    height: 100vh;
+    grid-template-columns: 200px auto auto auto auto;
+    grid-template-rows: 10vh auto;
+}
+.SideBarBtns{
+    padding-top: 30vh;
+    padding-left: 50px;
 }
