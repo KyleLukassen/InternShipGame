@@ -1,0 +1,17 @@
+body{
+    background-color: #643302;
+    margin: 0%;
+    padding: 0%;
+}
+.SideBar{
+    float: left;
+    border-right: yellow 2px ridge;
+    width: 200px;
+    min-height: 100vh;
+    margin: 0%;
+    padding: 0%;
+}
+#Gamescreen{
+    float: left;
+    height: 100vh;
+}
