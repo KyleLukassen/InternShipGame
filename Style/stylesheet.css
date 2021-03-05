@@ -15,7 +15,11 @@ body{
     padding-top: 30vh;
     padding-left: 50px;
 }
+.TitleArea{
+    height: 10vh;
+    border-bottom: yellow 2px ridge;
+}
 #Gamescreen{
     float: left;
-    height: 100vh;
+    height: 90vh;
 }
