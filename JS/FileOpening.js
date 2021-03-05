@@ -5,7 +5,7 @@ function loadDoc(TextFile) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         //displays text of the document
-        document.getElementById("demo").innerHTML = this.responseText;
+        document.getElementById("Gamescreen").innerHTML = this.responseText;
       }
     };
     xhttp.open("GET", TextFile, true);
