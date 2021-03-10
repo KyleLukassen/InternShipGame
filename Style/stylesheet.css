@@ -23,6 +23,22 @@ body{
 #Gamescreen{
     grid-area: game;
 }
+.BattleScreen{
+    display: grid;
+    grid-template-areas: 
+    "NPCIcon1 PlayerAvatar NPCIcon5 Enemy1"
+    "NPCIcon2 AllyNPC1 NPCIcon6 Enemy2"
+    "NPCIcon3 AllyNPC2 NPCIcon7 Enemy3"
+    "NPCIcon4 AllyNPC3 NPCIcon8 Enemy4"
+    "AllySummons AllySummons EnemySummons EnemySummons"
+    "AllyDetails AllyDetails EnemyDetails EnemyDetails";
+    gap: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 10% 40% 10% 40%;
+    grid-template-rows: 10% 10% 10% 10% auto;
+}
 
 .grid-container{
     display: grid;
