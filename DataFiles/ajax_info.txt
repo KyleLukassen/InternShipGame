@@ -1,2 +1,5 @@
-<h1>dit betekent dat het document geladen is.</h1>
-ungabunga.
+<h1>You see a cabin In the woods</h1><br>
+You:<br>
+<button type="button" onclick="loadDoc('./DataFiles/OpenCabin.txt')">Open the cabin</button><br>
+<button type="button" onclick="loadDoc('./DataFiles/WindowLook.txt')">Look through the Window</button><br>
+<button type="button" onclick="loadDoc('./DataFiles/WalkAway.txt')">Walk away</button><br>
