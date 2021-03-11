@@ -1,3 +1,4 @@
+/*Defines the grid area*/
 .BattleScreen{
     display: grid;
     grid-template-areas: 
@@ -14,6 +15,7 @@
     grid-template-columns: 100px auto 100px auto;
     grid-template-rows: 100px 100px 100px 100px auto;
 }
+/*Assigns the div to the grid spaces and applies some styling*/
 #Icon1{
     grid-area: NPCIcon1;
     border-right: black 2px ridge;
@@ -106,11 +108,10 @@
 #EnemyCharacterDetails{
     grid-area: EnemyDetails;
 }
-
+/*Some styling for the Error function activator*/
 #ErrorActivator{
     width: 0px;
     height: 0px;
     padding: 0px;
     margin: 0px;
-    grid-area: NPCIcon1; 
 }

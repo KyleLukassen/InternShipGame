@@ -1,6 +1,5 @@
 <div class="BattleScreen">
-<img id="ErrorActivator" src onerror="BattleScreenFill()">
-<div id="Icon1"></div>
+<div id="Icon1"><img id="ErrorActivator" src onerror="BattleScreenFill()"></div>
 <div id="Icon2"></div>
 <div id="Icon3"></div>
 <div id="Icon4"></div>
