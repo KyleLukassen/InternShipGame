@@ -1,0 +1,96 @@
+.BattleScreen{
+    display: grid;
+    grid-template-areas: 
+    "NPCIcon1 PlayerAvatar NPCIcon5 Enemy1"
+    "NPCIcon2 AllyNPC1 NPCIcon6 Enemy2"
+    "NPCIcon3 AllyNPC2 NPCIcon7 Enemy3"
+    "NPCIcon4 AllyNPC3 NPCIcon8 Enemy4"
+    "AllySummons AllySummons EnemySummons EnemySummons"
+    "AllyDetails AllyDetails EnemyDetails EnemyDetails";
+    gap: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 100px auto 100px auto;
+    grid-template-rows: 100px 100px 100px 100px auto;
+}
+#Icon1{
+    grid-area: NPCIcon1;
+    border-right: black 2px ridge;
+    border-bottom: black 2px ridge;
+    border-left: yellow 2px ridge;
+}
+#Icon2{
+    grid-area: NPCIcon2;
+    border-right: black 2px ridge;
+    border-bottom: black 2px ridge;
+    border-left: yellow 2px ridge;
+}
+#Icon3{
+    grid-area: NPCIcon3;
+    border-right: black 2px ridge;
+    border-bottom: black 2px ridge;
+    border-left: yellow 2px ridge;
+}
+#Icon4{
+    grid-area: NPCIcon4;
+    border-right: black 2px ridge;
+    border-left: yellow 2px ridge;
+    border-bottom: yellow 2px ridge;
+}
+#Icon5{
+    grid-area: NPCIcon5;
+    border-right: black 2px ridge;
+    border-bottom: black 2px ridge;
+    border-left: yellow 2px ridge;
+}
+#Icon6{
+    grid-area: NPCIcon6;
+    border-right: black 2px ridge;
+    border-bottom: black 2px ridge;
+    border-left: yellow 2px ridge;
+}
+#Icon7{
+    grid-area: NPCIcon7;
+    border-right: black 2px ridge;
+    border-bottom: black 2px ridge;
+    border-left: yellow 2px ridge;
+}
+#Icon8{
+    grid-area: NPCIcon8;
+    border-left: yellow 2px ridge;
+    border-right: black 2px ridge;
+    border-bottom: yellow 2px ridge;
+}
+#PlayerAvatar{
+    grid-area: PlayerAvatar;
+    border-bottom: black 2px ridge;
+}
+#AllyNPC1{
+    grid-area: AllyNPC1;
+    border-bottom: black 2px ridge;
+}
+#AllyNPC2{
+    grid-area: AllyNPC2;
+    border-bottom: black 2px ridge;
+}
+#AllyNPC3{
+    grid-area: AllyNPC3;
+    border-bottom: yellow 2px ridge;
+}
+#Enemy1{
+    grid-area: Enemy1;
+    border-bottom: black 2px ridge;
+}
+#Enemy2{
+    grid-area: Enemy2;
+    border-bottom: black 2px ridge;
+}
+#Enemy3{
+    grid-area: Enemy3;
+    border-bottom: black 2px ridge;
+}
+#Enemy4{
+    grid-area: Enemy4;
+    border-bottom: yellow 2px ridge;
+}

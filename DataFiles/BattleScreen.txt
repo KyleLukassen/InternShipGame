@@ -1,0 +1,21 @@
+
+<div class="BattleScreen" onload="BattleScreenFill()">
+<div id="Icon1"></div>
+<div id="Icon2"></div>
+<div id="Icon3"></div>
+<div id="Icon4"></div>
+<div id="Icon5"></div>
+<div id="Icon6"></div>
+<div id="Icon7"></div>
+<div id="Icon8"></div>
+
+<div id="PlayerAvatar" class="IconHolder"></div>
+<div id="AllyNPC1" class="IconHolder"></div>
+<div id="AllyNPC2" class="IconHolder"></div>
+<div id="AllyNPC3" class="IconHolder"></div>
+
+<div id="Enemy1" class="IconHolder"></div>
+<div id="Enemy2" class="IconHolder"></div>
+<div id="Enemy3" class="IconHolder"></div>
+<div id="Enemy4" class="IconHolder"></div>
+</div>
