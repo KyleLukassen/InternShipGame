@@ -1,0 +1,4 @@
+<h1>Which screen to test</h1><br>
+<button type="button" onclick="loadDoc('./DataFiles/BattleScreen.txt')">battle screen</button><br>
+<button type="button" onclick="loadDoc('./DataFiles/WindowLook.txt')">screen 2</button><br>
+<button type="button" onclick="loadDoc('./DataFiles/WalkAway.txt')">screen 3</button><br>

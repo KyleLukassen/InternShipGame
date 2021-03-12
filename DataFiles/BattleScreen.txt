@@ -1,0 +1,27 @@
+<div class="BattleScreen">
+<div id="Icon1"><img id="ErrorActivator" src onerror="BattleScreenFill()"></div>
+<div id="Icon2"></div>
+<div id="Icon3"></div>
+<div id="Icon4"></div>
+<div id="Icon5"></div>
+<div id="Icon6"></div>
+<div id="Icon7"></div>
+<div id="Icon8"></div>
+
+<div id="PlayerAvatar" class="Character"></div>
+<div id="AllyNPC1" class="Character"></div>
+<div id="AllyNPC2" class="Character"></div>
+<div id="AllyNPC3" class="Character"></div>
+
+<div id="Enemy1" class="Character"></div>
+<div id="Enemy2" class="Character"></div>
+<div id="Enemy3" class="Character"></div>
+<div id="Enemy4" class="Character"></div>
+
+
+<div id="AllySummons"></div>
+<div id="EnemySummons"></div>
+
+<div id="AllyCharacterDetails"></div>
+<div id="EnemyCharacterDetails"></div>
+</div>

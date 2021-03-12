@@ -1,5 +1,7 @@
 body{
-    background-color: #643302;
+    background-image: url("../Images/BackgroundImage.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     margin: 0%;
     padding: 0%;
     color: #e0a906;
@@ -21,7 +23,6 @@ body{
 #Gamescreen{
     grid-area: game;
 }
-
 .grid-container{
     display: grid;
     grid-template-areas: 
@@ -35,5 +36,9 @@ body{
 }
 .SideBarBtns{
     padding-top: 30vh;
-    padding-left: 50px;
+    padding-left: 25px;
+}
+.SideBarButton{
+    width: 150px;
+    height: 38px;
 }
