@@ -1,0 +1,1 @@
+[{TName: "Bandit", TLevel: 2},{TName: "Golem", TLevel: 3},{TName: "Pirate", TLevel: 6},{TName: "Witch", TLevel: 8}]
