@@ -1,18 +1,16 @@
 var IconArray = ["Icon1", "Icon2", "Icon3", "Icon4", "Icon5", "Icon6", "Icon7", "Icon8"];
 var EnemyCharacterArray = ["Enemy1", "Enemy2", "Enemy3", "Enemy4"];
 
-var Bandit = {TName: "Bandit", TLevel: 2};
-var Golem = {TName: "Golem", TLevel: 3};
-var Pirate = {TName: "Pirate", TLevel: 6};
-var Witch = {TName: "Witch", TLevel: 8};
-var EnemytestArray = [Bandit, Golem, Pirate, Witch];
-
-function FileArrayTest(TextFile){
+//initiated on battlescren load
+function FileArrayRead(TextFile){
+    //make new XMLHttpRequest
     var f = new XMLHttpRequest();
     f.onreadystatechange = function(){
         if(f.readyState == 4 || f.status == 200)
         {
+            //place response text in variable 
             var FileArrayString = f.responseText;
+            //clean up response text
             s = FileArrayString.replace(/\\n/g, "\\n")  
                                 .replace(/\\'/g, "\\'")
                                 .replace(/\\"/g, '\\"')
@@ -22,30 +20,38 @@ function FileArrayTest(TextFile){
                                 .replace(/\\b/g, "\\b")
                                 .replace(/\\f/g, "\\f");
             s = FileArrayString.replace(/[\u0000-\u0019]+/g,"");
-
-            var res = JSON.parse(s);
-            
-            ActOnCompletion(res);
+            //parse response text to JSON
+            var EnemyArray = JSON.parse(s); 
+            //Initiates enemie selection
+            ActOnCompletion(EnemyArray);
         }
     }
     f.open("GET", TextFile, false);
     f.send(null);
 }
 
-function ActOnCompletion(res){
-    console.log(res);
-}
-function BattleScreenFill(){
+function ActOnCompletion(EnemyArray){
+    //create array to fill with selected enemies
     var EnemiesToFight = [];
+    //continue running the function until there 4 enemies to fight
     while (EnemiesToFight.length < 4){
-        var SelectedEnemy = Math.floor(Math.random() * (EnemytestArray.length - 1)); 
-        console.log(SelectedEnemy);
-        console.log(EnemytestArray[Golem.TName]);
-        EnemiesToFight.push(EnemytestArray[SelectedEnemy]);
+        //generate random number
+        var SelectedEnemy = Math.floor(Math.random() * (EnemyArray.length - 1)); 
+        //add enemy that corresponds with random number to array
+        EnemiesToFight.push(EnemyArray[SelectedEnemy]);
     }
-    console.log(EnemiesToFight.length);
     console.log(EnemiesToFight);
-    document.getElementById("Icon1").innerHTML = "<img src='./Images/Placeholder.png'>";
-    FileArrayTest("./DataFiles/EnemyData.txt");
+    //initiate function to fill the battle screen with data
+    BattleScreenFill(EnemiesToFight);
+}
+
+function BattleScreenFill(EnemiesToFight){
+    console.log("Time to fill Battle screen");
+    console.log(EnemiesToFight);
+    IconArray.forEach(i => {
+        document.getElementById(i).innerHTML = "<img src='./Images/Placeholder.png'>";
+    });
+        
+    
 }
 
