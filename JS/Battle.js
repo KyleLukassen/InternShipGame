@@ -8,16 +8,27 @@ var Witch = {TName: "Witch", TLevel: 8};
 var EnemytestArray = [Bandit, Golem, Pirate, Witch];
 
 function FileArrayTest(TextFile){
-      //create new XMLHttpRequest
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var FileArray = this.responseText;
+    var f = new XMLHttpRequest();
+    f.onreadystatechange = function(){
+        if(f.readyState == 4 || f.status == 200)
+        {
+            var FileArrayString = f.responseText;
+            s = FileArrayString.replace(/\\n/g, "\\n")  
+                                .replace(/\\'/g, "\\'")
+                                .replace(/\\"/g, '\\"')
+                                .replace(/\\&/g, "\\&")
+                                .replace(/\\r/g, "\\r")
+                                .replace(/\\t/g, "\\t")
+                                .replace(/\\b/g, "\\b")
+                                .replace(/\\f/g, "\\f");
+            s = FileArrayString.replace(/[\u0000-\u0019]+/g,"");
+
+            var res = JSON.parse(s);
+            console.log(res);
         }
-      };
-      xhttp.open("GET", TextFile, true);
-      xhttp.send();
-      return FileArray;
+    }
+    f.open("GET", TextFile, false);
+    f.send(null);
 }
 
 function BattleScreenFill(){
@@ -32,6 +43,5 @@ function BattleScreenFill(){
     console.log(EnemiesToFight);
     document.getElementById("Icon1").innerHTML = "<img src='./Images/Placeholder.png'>";
     FileArrayTest("./DataFiles/EnemyData.txt");
-    console.log(FileArray);
 }
 
