@@ -40,18 +40,28 @@ function ActOnCompletion(EnemyArray){
         //add enemy that corresponds with random number to array
         EnemiesToFight.push(EnemyArray[SelectedEnemy]);
     }
-    console.log(EnemiesToFight);
     //initiate function to fill the battle screen with data
     BattleScreenFill(EnemiesToFight);
 }
 
 function BattleScreenFill(EnemiesToFight){
-    console.log("Time to fill Battle screen");
-    console.log(EnemiesToFight);
-    IconArray.forEach(i => {
-        document.getElementById(i).innerHTML = "<img src='./Images/Placeholder.png'>";
+    //define a Variable to use in the foreach loops
+    var EnemyCount = 0;
+    //function to add the icons
+    IconArray.forEach(icon => {
+        document.getElementById(icon).innerHTML = "<img src='./Images/Placeholder.png'>";
     });
-        
-    
+    //function to add the enemies into the battle screen
+    EnemyCharacterArray.forEach(i => {
+        console.log(EnemiesToFight[EnemyCount]);
+        //grab the name of the enemy and convert it into a string
+        EnemyNameString = JSON.stringify(EnemiesToFight[EnemyCount].Name);
+        //Remove all " from the string
+        EnemyName = EnemyNameString.replace(/"/g,'');
+        //place the name into the battle screen
+        document.getElementById(i).innerHTML = EnemyName;
+        //increase EnemyCount to iterate the next enemy
+        EnemyCount++;
+    });
 }
 
