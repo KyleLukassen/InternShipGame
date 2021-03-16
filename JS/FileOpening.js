@@ -10,4 +10,5 @@ function loadDoc(TextFile) {
     };
     xhttp.open("GET", TextFile, true);
     xhttp.send();
-  }
+}
+
