@@ -1,1 +1,1 @@
-[{"TName": "Bandit", "TLevel": "2"},{"TName": "Golem", "TLevel": "3"},{"TName": "Pirate", "TLevel": "6"},{"TName": "Witch", "TLevel": "8"}]
+[{"Name": "Bandit", "Level": 2},{"Name": "Golem", "Level": 3},{"Name": "Pirate", "Level": 6},{"Name": "Witch", "Level": 8}]

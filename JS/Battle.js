@@ -24,13 +24,17 @@ function FileArrayTest(TextFile){
             s = FileArrayString.replace(/[\u0000-\u0019]+/g,"");
 
             var res = JSON.parse(s);
-            console.log(res);
+            
+            ActOnCompletion(res);
         }
     }
     f.open("GET", TextFile, false);
     f.send(null);
 }
 
+function ActOnCompletion(res){
+    console.log(res);
+}
 function BattleScreenFill(){
     var EnemiesToFight = [];
     while (EnemiesToFight.length < 4){
