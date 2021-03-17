@@ -24,4 +24,37 @@
 
 <div id="AllyCharacterDetails"></div>
 <div id="EnemyCharacterDetails"></div>
+
+<div id="CharacterContainer1"></div>
+<div id="NameContainer1"></div>
+<div id="LevelContainer1"></div>
+
+<div id="CharacterContainer2"></div>
+<div id="NameContainer2"></div>
+<div id="LevelContainer2"></div>
+
+<div id="CharacterContainer3"></div>
+<div id="NameContainer3"></div>
+<div id="LevelContainer3"></div>
+
+<div id="CharacterContainer4"></div>
+<div id="NameContainer4"></div>
+<div id="LevelContainer4"></div>
+
+<div id="CharacterContainer5"></div>
+<div id="NameContainer5"></div>
+<div id="LevelContainer5"></div>
+
+<div id="CharacterContainer6"></div>
+<div id="NameContainer6"></div>
+<div id="LevelContainer6"></div>
+
+<div id="CharacterContainer7"></div>
+<div id="NameContainer7"></div>
+<div id="LevelContainer7"></div>
+
+<div id="CharacterContainer8"></div>
+<div id="NameContainer8"></div>
+<div id="LevelContainer8"></div>
+
 </div>
