@@ -65,36 +65,84 @@
     border-bottom: yellow 2px ridge;
 }
 #PlayerAvatar{
+    display: grid;
     grid-area: PlayerAvatar;
     border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "PlayerName PlayerLevel"
+    "PlayerHealth PlayerHPBar";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #AllyNPC1{
+    display: grid;
     grid-area: AllyNPC1;
     border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "AllyName1 AllyLevel1"
+    "AllyHealth1 AllyHPBar1";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #AllyNPC2{
+    display: grid;
     grid-area: AllyNPC2;
     border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "AllyName2 AllyLevel2"
+    "AllyHealth2 AllyHPBar2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #AllyNPC3{
+    display: grid;
     grid-area: AllyNPC3;
     border-bottom: yellow 2px ridge;
+    grid-template-areas: 
+    "AllyName3 AllyLevel3"
+    "AllyHealth3 AllyHPBar3";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #Enemy1{
+    display: grid;
     grid-area: Enemy1;
     border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "EnemyName1 EnemyLevel1"
+    "EnemyHealth1 EnemyHPBar1";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #Enemy2{
+    display: grid;
     grid-area: Enemy2;
     border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "EnemyName2 EnemyLevel2"
+    "EnemyHealth2 EnemyHPBar2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #Enemy3{
+    display: grid;
     grid-area: Enemy3;
     border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "EnemyName3 EnemyLevel3"
+    "EnemyHealth3 EnemyHPBar3";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #Enemy4{
+    display: grid;
     grid-area: Enemy4;
     border-bottom: yellow 2px ridge;
+    grid-template-areas: 
+    "EnemyName4 EnemyLevel4"
+    "EnemyHealth4 EnemyHPBar4";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
 }
 #AllySummons{
     grid-area: AllySummons;
@@ -108,6 +156,111 @@
 #EnemyCharacterDetails{
     grid-area: EnemyDetails;
 }
+/*The areas to be placed in the character area of the battle screen grid*/
+/*Player Avatar*/
+#NameContainer1{
+    grid-area: PlayerName;
+}
+#LevelContainer1{
+    grid-area: PlayerLevel;
+}
+#HealthContainer1{
+    grid-area: PlayerHealth;
+}
+#HealthBar1{
+    grid-area: PlayerHPBar;
+}
+/*Ally NPC1*/
+#NameContainer2{
+    grid-area: AllyName1;
+}
+#LevelContainer2{
+    grid-area: AllyLevel1;
+}
+#HealthContainer2{
+    grid-area: AllyHealth1;
+}
+#HealthBar2{
+    grid-area: AllyHPBar1;
+}
+/*Ally NPC 2*/
+#NameContainer3{
+    grid-area: AllyName2;
+}
+#LevelContainer3{
+    grid-area: AllyLevel2;
+}
+#HealthContainer3{
+    grid-area: AllyHealth2;
+}
+#HealthBar3{
+    grid-area: AllyHPBar2;
+}
+/*Ally NPC 3*/
+#NameContainer4{
+    grid-area: AllyName3;
+}
+#LevelContainer4{
+    grid-area: AllyLevel3;
+}
+#HealthContainer4{
+    grid-area: AllyHealth3;
+}
+#HealthBar4{
+    grid-area: AllyHPBar3;
+}
+/*Enemy 1*/
+#NameContainer5{
+    grid-area: EnemyName1;
+}
+#LevelContainer5{
+    grid-area: EnemyLevel1;
+}
+#HealthContainer5{
+    grid-area: EnemyHealth1;
+}
+#HealthBar5{
+    grid-area: EnemyHPBar1;
+}
+/*Enemy 2*/
+#NameContainer6{
+    grid-area: EnemyName2;
+}
+#LevelContainer6{
+    grid-area: EnemyLevel2;
+}
+#HealthContainer6{
+    grid-area: EnemyHealth2;
+}
+#HealthBar6{
+    grid-area: EnemyHPBar2;
+}
+/*Enemy 3*/
+#NameContainer7{
+    grid-area: EnemyName3;
+}
+#LevelContainer7{
+    grid-area: EnemyLevel3;
+}
+#HealthContainer7{
+    grid-area: EnemyHealth3;
+}
+#HealthBar7{
+    grid-area: EnemyHPBar3;
+}
+/*Enemy 4*/
+#NameContainer8{
+    grid-area: EnemyName4;
+}
+#LevelContainer8{
+    grid-area: EnemyLevel4;
+}
+#HealthContainer8{
+    grid-area: EnemyHealth4;
+}
+#HealthBar8{
+    grid-area: EnemyHPBar4;
+}
 /*Some styling for the Error function activator*/
 #ErrorActivator{
     width: 0px;
@@ -115,3 +268,16 @@
     padding: 0px;
     margin: 0px;
 }
+/*Styling for the health bars*/
+/*Firefox styling*/
+.Healthbar::-moz-progress-bar { 
+    background: red; 
+} 
+/*Chrome/Safari styling*/
+.Healthbar::-webkit-progress-value{
+  background: red;
+}
+/*Internet Explorer/Edge styling*/
+.Healthbar { 
+    background: red; 
+} 

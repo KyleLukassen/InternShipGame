@@ -8,53 +8,66 @@
 <div id="Icon7"></div>
 <div id="Icon8"></div>
 
-<div id="PlayerAvatar" class="Character"></div>
-<div id="AllyNPC1" class="Character"></div>
-<div id="AllyNPC2" class="Character"></div>
-<div id="AllyNPC3" class="Character"></div>
+<div id="PlayerAvatar" class="Character">
+<div id="NameContainer1"></div>
+<div id="LevelContainer1"></div>
+<div id="HealthContainer1"></div>
+<div id="HealthBar1"></div>
+</div>
 
-<div id="Enemy1" class="Character"></div>
-<div id="Enemy2" class="Character"></div>
-<div id="Enemy3" class="Character"></div>
-<div id="Enemy4" class="Character"></div>
+<div id="AllyNPC1" class="Character">
+<div id="NameContainer2"></div>
+<div id="LevelContainer2"></div>
+<div id="HealthContainer2"></div>
+<div id="HealthBar2"></div>
+</div>
 
+<div id="AllyNPC2" class="Character">
+<div id="NameContainer3"></div>
+<div id="LevelContainer3"></div>
+<div id="HealthContainer3"></div>
+<div id="HealthBar3"></div>
+</div>
+
+<div id="AllyNPC3" class="Character">
+<div id="NameContainer4"></div>
+<div id="LevelContainer4"></div>
+<div id="HealthContainer4"></div>
+<div id="HealthBar4"></div>
+</div>
+
+<div id="Enemy1" class="Character">
+<div id="NameContainer5"></div>
+<div id="LevelContainer5"></div>
+<div id="HealthContainer5"></div>
+<div id="HealthBar5"></div>
+</div>
+
+<div id="Enemy2" class="Character">
+<div id="NameContainer6"></div>
+<div id="LevelContainer6"></div>
+<div id="HealthContainer6"></div>
+<div id="HealthBar6"></div>
+</div>
+
+<div id="Enemy3" class="Character">
+<div id="NameContainer7"></div>
+<div id="LevelContainer7"></div>
+<div id="HealthContainer7"></div>
+<div id="HealthBar7"></div>
+</div>
+
+<div id="Enemy4" class="Character">
+<div id="NameContainer8"></div>
+<div id="LevelContainer8"></div>
+<div id="HealthContainer8"></div>
+<div id="HealthBar8"></div>
+</div>
 
 <div id="AllySummons"></div>
 <div id="EnemySummons"></div>
 
 <div id="AllyCharacterDetails"></div>
 <div id="EnemyCharacterDetails"></div>
-
-<div id="CharacterContainer1"></div>
-<div id="NameContainer1"></div>
-<div id="LevelContainer1"></div>
-
-<div id="CharacterContainer2"></div>
-<div id="NameContainer2"></div>
-<div id="LevelContainer2"></div>
-
-<div id="CharacterContainer3"></div>
-<div id="NameContainer3"></div>
-<div id="LevelContainer3"></div>
-
-<div id="CharacterContainer4"></div>
-<div id="NameContainer4"></div>
-<div id="LevelContainer4"></div>
-
-<div id="CharacterContainer5"></div>
-<div id="NameContainer5"></div>
-<div id="LevelContainer5"></div>
-
-<div id="CharacterContainer6"></div>
-<div id="NameContainer6"></div>
-<div id="LevelContainer6"></div>
-
-<div id="CharacterContainer7"></div>
-<div id="NameContainer7"></div>
-<div id="LevelContainer7"></div>
-
-<div id="CharacterContainer8"></div>
-<div id="NameContainer8"></div>
-<div id="LevelContainer8"></div>
 
 </div>

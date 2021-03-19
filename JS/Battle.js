@@ -1,5 +1,8 @@
 var IconArray = ["Icon1", "Icon2", "Icon3", "Icon4", "Icon5", "Icon6", "Icon7", "Icon8"];
-var EnemyCharacterArray = ["Enemy1", "Enemy2", "Enemy3", "Enemy4"];
+var EnemyNameArray = ["NameContainer5", "NameContainer6", "NameContainer7", "NameContainer8"];
+var EnemyLvlArray = ["LevelContainer5","LevelContainer6","LevelContainer7","LevelContainer8"];
+var EnemyHealthArray = ["HealthContainer5", "HealthContainer6", "HealthContainer7", "HealthContainer8"];
+var EnemyHPBarArray = ["HealthBar5", "HealthBar6", "HealthBar7", "HealthBar8"];
 
 //initiated on battlescren load
 function FileArrayRead(TextFile){
@@ -52,16 +55,43 @@ function BattleScreenFill(EnemiesToFight){
         document.getElementById(icon).innerHTML = "<img src='./Images/Placeholder.png'>";
     });
     //function to add the enemies into the battle screen
-    EnemyCharacterArray.forEach(i => {
-        console.log(EnemiesToFight[EnemyCount]);
+    EnemyNameArray.forEach(i => {
         //grab the name of the enemy and convert it into a string
         EnemyNameString = JSON.stringify(EnemiesToFight[EnemyCount].Name);
         //Remove all " from the string
         EnemyName = EnemyNameString.replace(/"/g,'');
-        //place the name into the battle screen
-        document.getElementById(i).innerHTML = EnemyName;
+        //place the Name into the battle screen
+        document.getElementById(i).innerHTML = "Name: " + EnemyName;
         //increase EnemyCount to iterate the next enemy
         EnemyCount++;
     });
+    // reset EnemyCount Variable back to 0 for the next loop
+    EnemyCount = 0;
+    //loop to place Level
+    EnemyLvlArray.forEach(i =>{
+        //place the level in de battle screen
+        document.getElementById(i).innerHTML = "Level: " + JSON.parse(EnemiesToFight[EnemyCount].Level);
+        //increase EnemyCount to iterate the next enemy
+        EnemyCount++;
+    });
+    // reset EnemyCount Variable back to 0 for the next loop
+    EnemyCount = 0
+    //Loop to place Health
+    EnemyHealthArray.forEach(i =>{
+        //place the Health in de battle screen
+        document.getElementById(i).innerHTML = "Health: " + JSON.parse(EnemiesToFight[EnemyCount].Health);
+        //increase EnemyCount to iterate the next enemy
+        EnemyCount++;
+    })
+    // reset EnemyCount Variable back to 0 for the next loop
+    EnemyCount = 0
+    //loop to place HPbar
+    EnemyHPBarArray.forEach(i =>{
+        var HealthValue = JSON.parse(EnemiesToFight[EnemyCount].Health);
+        //place the Health in de battle screen
+        document.getElementById(i).innerHTML = '<progress value="'+HealthValue+'" max="'+HealthValue+'" class="Healthbar"></progress>';
+        //increase EnemyCount to iterate the next enemy
+        EnemyCount++;
+    })
 }
 

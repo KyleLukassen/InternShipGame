@@ -1,6 +1,22 @@
 [
-    {"Name": "Bandit", "Level": 2},
-    {"Name": "Golem", "Level": 3},
-    {"Name": "Pirate", "Level": 6},
-    {"Name": "Witch", "Level": 8}
+    {
+        "Name": "Bandit", 
+        "Level": 2,
+        "Health": 15
+    },
+    {
+        "Name": "Golem", 
+        "Level": 3,
+        "Health": 70
+    },
+    {
+        "Name": "Pirate", 
+        "Level": 6,
+        "Health": 50
+    },
+    {
+        "Name": "Witch", 
+        "Level": 8,
+        "Health": 45
+    }
 ]
