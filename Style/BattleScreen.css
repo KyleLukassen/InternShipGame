@@ -270,14 +270,28 @@
 }
 /*Styling for the health bars*/
 /*Firefox styling*/
-.Healthbar::-moz-progress-bar { 
+.HealthBar::-moz-progress-bar { 
     background: red; 
 } 
 /*Chrome/Safari styling*/
-.Healthbar::-webkit-progress-value{
+.HealthBar::-webkit-progress-value{
   background: red;
 }
 /*Internet Explorer/Edge styling*/
-.Healthbar { 
+.HealthBar { 
     background: red; 
+} 
+
+/*Styling for the Mana bars*/
+/*Firefox styling*/
+.ManaBar::-moz-progress-bar { 
+    background: Blue; 
+} 
+/*Chrome/Safari styling*/
+.ManaBar::-webkit-progress-value{
+  background: Blue;
+}
+/*Internet Explorer/Edge styling*/
+.ManaBar { 
+    background: Blue; 
 } 

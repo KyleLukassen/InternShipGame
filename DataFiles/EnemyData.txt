@@ -1,22 +1,62 @@
 [
     {
+        "Name": "Wolf", 
+        "Level": 1,
+        "Health": 10,
+        "Mana": 15
+    },
+    {
         "Name": "Bandit", 
         "Level": 2,
-        "Health": 15
+        "Health": 15,
+        "Mana": 25
     },
     {
         "Name": "Golem", 
         "Level": 3,
-        "Health": 70
+        "Health": 70,
+        "Mana": 15
     },
     {
         "Name": "Pirate", 
         "Level": 6,
-        "Health": 50
+        "Health": 50,
+        "Mana": 50
     },
     {
         "Name": "Witch", 
         "Level": 8,
-        "Health": 45
+        "Health": 45,
+        "Mana": 160
+    },
+    {
+        "Name": "Demon Eye", 
+        "Level": 15,
+        "Health": 125,
+        "Mana": 225
+    },
+    {
+        "Name": "Albatross", 
+        "Level": 20,
+        "Health": 150,
+        "Mana": 350
+    },
+    {
+        "Name": "Titan Tarantula", 
+        "Level": 25,
+        "Health": 240,
+        "Mana": 280
+    },
+    {
+        "Name": "Phantom Armor", 
+        "Level": 35,
+        "Health": 575,
+        "Mana": 275
+    },
+    {
+        "Name": "Alcatisca", 
+        "Level": 45,
+        "Health": 750,
+        "Mana": 450
     }
 ]
