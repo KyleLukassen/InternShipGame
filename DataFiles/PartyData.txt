@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Piwa", 
+        "BattlePosition": 2,
+        "ActionPreference": "Offence",
+        "Level": 1,
+        "Health": 50,
+        "Mana": 50
+    },
+    {
+        "Name": "Racha-elle", 
+        "BattlePosition": 3,
+        "ActionPreference": "Support",
+        "Level": 1,
+        "Health": 35,
+        "Mana": 65
+    }
+]

@@ -82,7 +82,7 @@ function BattleScreenFill(EnemiesToFight){
         document.getElementById(i).innerHTML = "Health: " + JSON.parse(EnemiesToFight[EnemyCount].Health)+"<br>Mana: "+JSON.parse(EnemiesToFight[EnemyCount].Mana);
         //increase EnemyCount to iterate the next enemy
         EnemyCount++;
-    })
+    });
     // reset EnemyCount Variable back to 0 for the next loop
     EnemyCount = 0
     //loop to place HealthBar And ManaBar
@@ -92,9 +92,9 @@ function BattleScreenFill(EnemiesToFight){
         //Variable to hold the Mana Value
         var ManaValue = JSON.parse(EnemiesToFight[EnemyCount].Mana);
         //place the Health in de battle screen
-        document.getElementById(i).innerHTML = '<progress value="'+HealthValue+'" max="'+HealthValue+'" class="HealthBar"></progress><br><progress value="'+ManaValue+'" max="'+ManaValue+'" class="ManaBar"></progress>';
+        document.getElementById(i).innerHTML = 'Health: <progress value="'+HealthValue+'" max="'+HealthValue+'" class="HealthBar"></progress><br>Mana: <progress value="'+ManaValue+'" max="'+ManaValue+'" class="ManaBar"></progress>';
         //increase EnemyCount to iterate the next enemy
         EnemyCount++;
-    })
+    });
 }
 
