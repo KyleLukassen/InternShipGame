@@ -1,5 +1,5 @@
 <div class="BattleScreen">
-<div id="Icon1"><img id="ErrorActivator" src onerror="FileArrayRead('./DataFiles/EnemyData.txt')"></div>
+<div id="Icon1"><img id="ErrorActivator" src onerror="FileArrayRead('./DataFiles/EnemyData.txt','./DataFiles/PartyData.txt')"></div>
 <div id="Icon2"></div>
 <div id="Icon3"></div>
 <div id="Icon4"></div>

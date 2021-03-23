@@ -4,8 +4,46 @@ var EnemyLvlArray = ["LevelContainer5","LevelContainer6","LevelContainer7","Leve
 var EnemyHealthArray = ["HealthContainer5", "HealthContainer6", "HealthContainer7", "HealthContainer8"];
 var EnemyHPBarArray = ["HealthBar5", "HealthBar6", "HealthBar7", "HealthBar8"];
 
-//initiated on battlescren load
-function FileArrayRead(TextFile){
+function FileArrayRead(EnemyTextfile, PartyTextFile){
+    //Start function to read Text file with Enemy data
+    OpenFileEnemy(EnemyTextfile);
+    //start fumction to read text file with Party data
+    OpenFileParty(PartyTextFile);
+}
+//this function opens the text file with Party data and initiates a function to use that data
+function OpenFileParty(TextFile){
+    //make new XMLHttpRequest
+    var f = new XMLHttpRequest();
+    f.onreadystatechange = function(){
+        if(f.readyState == 4 || f.status == 200)
+        {
+            //place response text in variable 
+            var FileArrayString = f.responseText;
+            //clean up response text
+            s = FileArrayString.replace(/\\n/g, "\\n")  
+                                .replace(/\\'/g, "\\'")
+                                .replace(/\\"/g, '\\"')
+                                .replace(/\\&/g, "\\&")
+                                .replace(/\\r/g, "\\r")
+                                .replace(/\\t/g, "\\t")
+                                .replace(/\\b/g, "\\b")
+                                .replace(/\\f/g, "\\f");
+            s = FileArrayString.replace(/[\u0000-\u0019]+/g,"");
+            //parse response text to JSON
+            var PartyArray = JSON.parse(s); 
+            //Initiates Party Selection
+            ActOnCompletionParty(PartyArray);
+        }
+    }
+    f.open("GET", TextFile, false);
+    f.send(null);
+}
+function ActOnCompletionParty(PartyArray){
+    console.log("Expand this function");
+    console.log(PartyArray);
+}
+//this function opens the text file with Enemy data and initiates a function to use that data
+function OpenFileEnemy(TextFile){
     //make new XMLHttpRequest
     var f = new XMLHttpRequest();
     f.onreadystatechange = function(){
@@ -26,14 +64,14 @@ function FileArrayRead(TextFile){
             //parse response text to JSON
             var EnemyArray = JSON.parse(s); 
             //Initiates enemie selection
-            ActOnCompletion(EnemyArray);
+            ActOnCompletionEnemy(EnemyArray);
         }
     }
     f.open("GET", TextFile, false);
     f.send(null);
 }
 
-function ActOnCompletion(EnemyArray){
+function ActOnCompletionEnemy(EnemyArray){
     //create array to fill with selected enemies
     var EnemiesToFight = [];
     //continue running the function until there 4 enemies to fight
