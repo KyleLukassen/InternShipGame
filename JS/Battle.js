@@ -46,7 +46,7 @@ function OpenFileParty(TextFile){
 }
 function ActOnCompletionParty(PartyArray){
     PartyArray.forEach( i => {
-        if((i.BattlePosition) != null){
+        if(i.BattlePosition != null){
             //Place the name of the party member
             document.getElementById(PartyNameArray[i.BattlePosition-1]).innerHTML = "Name: " + i.Name;
             //Place the level of the party member
