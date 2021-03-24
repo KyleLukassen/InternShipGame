@@ -1,7 +1,7 @@
 [
     {
         "Name": "Piwa", 
-        "BattlePosition": 2,
+        "BattlePosition": 3,
         "ActionPreference": "Offence",
         "Level": 1,
         "Health": 50,
@@ -9,8 +9,24 @@
     },
     {
         "Name": "Racha-elle", 
-        "BattlePosition": 3,
+        "BattlePosition": null,
         "ActionPreference": "Support",
+        "Level": 1,
+        "Health": 35,
+        "Mana": 65
+    },
+    {
+        "Name": "Borsca", 
+        "BattlePosition": 2,
+        "ActionPreference": "Defence",
+        "Level": 1,
+        "Health": 35,
+        "Mana": 65
+    },
+    {
+        "Name": "Voimesco", 
+        "BattlePosition": 4,
+        "ActionPreference": "Defence",
         "Level": 1,
         "Health": 35,
         "Mana": 65

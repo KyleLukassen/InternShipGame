@@ -1,8 +1,14 @@
 var IconArray = ["Icon1", "Icon2", "Icon3", "Icon4", "Icon5", "Icon6", "Icon7", "Icon8"];
+var PartyNameArray = ["NameContainer1", "NameContainer2", "NameContainer3", "NameContainer4"];
+var PartyLvlArray = ["LevelContainer1","LevelContainer2","LevelContainer3","LevelContainer4"];
+var PartyHealthArray = ["HealthContainer1", "HealthContainer2", "HealthContainer3", "HealthContainer4"];
+var PartyHPBarArray = ["HealthBar1", "HealthBar2", "HealthBar3", "HealthBar4"];
+
 var EnemyNameArray = ["NameContainer5", "NameContainer6", "NameContainer7", "NameContainer8"];
 var EnemyLvlArray = ["LevelContainer5","LevelContainer6","LevelContainer7","LevelContainer8"];
 var EnemyHealthArray = ["HealthContainer5", "HealthContainer6", "HealthContainer7", "HealthContainer8"];
 var EnemyHPBarArray = ["HealthBar5", "HealthBar6", "HealthBar7", "HealthBar8"];
+
 
 function FileArrayRead(EnemyTextfile, PartyTextFile){
     //Start function to read Text file with Enemy data
@@ -39,8 +45,20 @@ function OpenFileParty(TextFile){
     f.send(null);
 }
 function ActOnCompletionParty(PartyArray){
+    PartyArray.forEach( i => {
+        if((PartyArray[PartyCount].BattlePosition) != null){
+            //Place the name of the party member
+            document.getElementById(PartyNameArray[i.BattlePosition-1]).innerHTML = "Name: " + i.Name;
+            //Place the level of the party member
+            document.getElementById(PartyLvlArray[i.BattlePosition-1]).innerHTML = "Level: " + i.Level;
+            //PLace the health and Mana of the party member
+            document.getElementById(PartyHealthArray[i.BattlePosition-1]).innerHTML = "Health: " + i.Health+"<br>Mana: "+i.Mana;
+            //PLace the health bar and mana bar of the party member
+            document.getElementById(PartyHPBarArray[i.BattlePosition-1]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress><br>Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
+        }
+    });
     console.log("Expand this function");
-    console.log(PartyArray);
+    
 }
 //this function opens the text file with Enemy data and initiates a function to use that data
 function OpenFileEnemy(TextFile){

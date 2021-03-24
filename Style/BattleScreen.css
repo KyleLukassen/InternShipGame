@@ -71,7 +71,7 @@
     grid-template-areas: 
     "PlayerName PlayerLevel"
     "PlayerHealth PlayerHPBar";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #AllyNPC1{
@@ -81,7 +81,7 @@
     grid-template-areas: 
     "AllyName1 AllyLevel1"
     "AllyHealth1 AllyHPBar1";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #AllyNPC2{
@@ -91,7 +91,7 @@
     grid-template-areas: 
     "AllyName2 AllyLevel2"
     "AllyHealth2 AllyHPBar2";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #AllyNPC3{
@@ -101,7 +101,7 @@
     grid-template-areas: 
     "AllyName3 AllyLevel3"
     "AllyHealth3 AllyHPBar3";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #Enemy1{
@@ -111,7 +111,7 @@
     grid-template-areas: 
     "EnemyName1 EnemyLevel1"
     "EnemyHealth1 EnemyHPBar1";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #Enemy2{
@@ -121,7 +121,7 @@
     grid-template-areas: 
     "EnemyName2 EnemyLevel2"
     "EnemyHealth2 EnemyHPBar2";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #Enemy3{
@@ -131,7 +131,7 @@
     grid-template-areas: 
     "EnemyName3 EnemyLevel3"
     "EnemyHealth3 EnemyHPBar3";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #Enemy4{
@@ -141,7 +141,7 @@
     grid-template-areas: 
     "EnemyName4 EnemyLevel4"
     "EnemyHealth4 EnemyHPBar4";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 50px 50px;
 }
 #AllySummons{
