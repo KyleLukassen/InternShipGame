@@ -46,7 +46,7 @@ function OpenFileParty(TextFile){
 }
 function ActOnCompletionParty(PartyArray){
     PartyArray.forEach( i => {
-        if((PartyArray[PartyCount].BattlePosition) != null){
+        if((i.BattlePosition) != null){
             //Place the name of the party member
             document.getElementById(PartyNameArray[i.BattlePosition-1]).innerHTML = "Name: " + i.Name;
             //Place the level of the party member
@@ -57,8 +57,6 @@ function ActOnCompletionParty(PartyArray){
             document.getElementById(PartyHPBarArray[i.BattlePosition-1]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress><br>Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
         }
     });
-    console.log("Expand this function");
-    
 }
 //this function opens the text file with Enemy data and initiates a function to use that data
 function OpenFileEnemy(TextFile){
