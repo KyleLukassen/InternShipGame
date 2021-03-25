@@ -5,7 +5,8 @@
         "ActionPreference": "Offence",
         "Level": 1,
         "Health": 50,
-        "Mana": 50
+        "Mana": 50,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Racha-elle", 
@@ -13,7 +14,8 @@
         "ActionPreference": "Support",
         "Level": 1,
         "Health": 35,
-        "Mana": 65
+        "Mana": 65,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Borsca", 
@@ -21,7 +23,8 @@
         "ActionPreference": "Defence",
         "Level": 1,
         "Health": 35,
-        "Mana": 65
+        "Mana": 65,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Voimesco", 
@@ -29,6 +32,7 @@
         "ActionPreference": "Defence",
         "Level": 1,
         "Health": 35,
-        "Mana": 65
+        "Mana": 65,
+        "Icon": "./Images/Placeholder.png"
     }
 ]

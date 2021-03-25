@@ -3,60 +3,70 @@
         "Name": "Wolf", 
         "Level": 1,
         "Health": 10,
-        "Mana": 15
+        "Mana": 15,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Bandit", 
         "Level": 2,
         "Health": 15,
-        "Mana": 25
+        "Mana": 25,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Golem", 
         "Level": 3,
         "Health": 70,
-        "Mana": 15
+        "Mana": 15,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Pirate", 
         "Level": 6,
         "Health": 50,
-        "Mana": 50
+        "Mana": 50,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Witch", 
         "Level": 8,
         "Health": 45,
-        "Mana": 160
+        "Mana": 160,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Demon Eye", 
         "Level": 15,
         "Health": 125,
-        "Mana": 225
+        "Mana": 225,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Albatross", 
         "Level": 20,
         "Health": 150,
-        "Mana": 350
+        "Mana": 350,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Titan Tarantula", 
         "Level": 25,
         "Health": 240,
-        "Mana": 280
+        "Mana": 280,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Phantom Armor", 
         "Level": 35,
         "Health": 575,
-        "Mana": 275
+        "Mana": 275,
+        "Icon": "./Images/Placeholder.png"
     },
     {
         "Name": "Alcatisca", 
         "Level": 45,
         "Health": 750,
-        "Mana": 450
+        "Mana": 450,
+        "Icon": "./Images/Placeholder.png"
     }
 ]

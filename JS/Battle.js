@@ -38,15 +38,17 @@ function OpenFileParty(TextFile){
             //parse response text to JSON
             var PartyArray = JSON.parse(s); 
             //Initiates Party Selection
-            ActOnCompletionParty(PartyArray);
+            BattleScreenFillParty(PartyArray);
         }
     }
     f.open("GET", TextFile, false);
     f.send(null);
 }
-function ActOnCompletionParty(PartyArray){
+function BattleScreenFillParty(PartyArray){
     PartyArray.forEach( i => {
         if(i.BattlePosition != null){
+            //place the icon of the party member
+            document.getElementById(IconArray[i.BattlePosition-1]).innerHTML = "<img src='"+i.Icon+"'></img>";
             //Place the name of the party member
             document.getElementById(PartyNameArray[i.BattlePosition-1]).innerHTML = "Name: " + i.Name;
             //Place the level of the party member
@@ -80,14 +82,14 @@ function OpenFileEnemy(TextFile){
             //parse response text to JSON
             var EnemyArray = JSON.parse(s); 
             //Initiates enemie selection
-            ActOnCompletionEnemy(EnemyArray);
+            EnemySelection(EnemyArray);
         }
     }
     f.open("GET", TextFile, false);
     f.send(null);
 }
 
-function ActOnCompletionEnemy(EnemyArray){
+function EnemySelection(EnemyArray){
     //create array to fill with selected enemies
     var EnemiesToFight = [];
     //continue running the function until there 4 enemies to fight
@@ -98,57 +100,22 @@ function ActOnCompletionEnemy(EnemyArray){
         EnemiesToFight.push(EnemyArray[SelectedEnemy]);
     }
     //initiate function to fill the battle screen with data
-    BattleScreenFill(EnemiesToFight);
+    BattleScreenFillEnemy(EnemiesToFight);
 }
 
-function BattleScreenFill(EnemiesToFight){
-    //define a Variable to use in the foreach loops
+function BattleScreenFillEnemy(EnemiesToFight){
     var EnemyCount = 0;
-    //function to add the icons
-    IconArray.forEach(icon => {
-        document.getElementById(icon).innerHTML = "<img src='./Images/Placeholder.png'>";
-    });
-    //function to add the enemies into the battle screen
-    EnemyNameArray.forEach(i => {
-        //grab the name of the enemy and convert it into a string
-        EnemyNameString = JSON.stringify(EnemiesToFight[EnemyCount].Name);
-        //Remove all " from the string
-        EnemyName = EnemyNameString.replace(/"/g,'');
-        //place the Name into the battle screen
-        document.getElementById(i).innerHTML = "Name: " + EnemyName;
-        //increase EnemyCount to iterate the next enemy
+    EnemiesToFight.forEach(i => {
+        //place the icon of the enemy
+        document.getElementById(IconArray[EnemyCount + 4]).innerHTML = "<img src='"+i.Icon+"'></img>";
+        //Place the name of the enemy
+        document.getElementById(EnemyNameArray[EnemyCount]).innerHTML = "Name: " + i.Name;
+        //place the level of the enemy
+        document.getElementById(EnemyLvlArray[EnemyCount]).innerHTML = "Level: " + i.Level;
+        //place the health and mana of the enemy as numbers
+        document.getElementById(EnemyHealthArray[EnemyCount]).innerHTML = "Health: " + i.Health+"<br>Mana: "+i.Mana;
+        //place the health and mana of the enemy as bars
+        document.getElementById(EnemyHPBarArray[EnemyCount]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress><br>Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
         EnemyCount++;
-    });
-    // reset EnemyCount Variable back to 0 for the next loop
-    EnemyCount = 0;
-    //loop to place Level
-    EnemyLvlArray.forEach(i =>{
-        //place the level in de battle screen
-        document.getElementById(i).innerHTML = "Level: " + JSON.parse(EnemiesToFight[EnemyCount].Level);
-        //increase EnemyCount to iterate the next enemy
-        EnemyCount++;
-    });
-    // reset EnemyCount Variable back to 0 for the next loop
-    EnemyCount = 0
-    //Loop to place Health and Mana
-    EnemyHealthArray.forEach(i =>{
-        //place the Health and Mana in de battle screen
-        document.getElementById(i).innerHTML = "Health: " + JSON.parse(EnemiesToFight[EnemyCount].Health)+"<br>Mana: "+JSON.parse(EnemiesToFight[EnemyCount].Mana);
-        //increase EnemyCount to iterate the next enemy
-        EnemyCount++;
-    });
-    // reset EnemyCount Variable back to 0 for the next loop
-    EnemyCount = 0
-    //loop to place HealthBar And ManaBar
-    EnemyHPBarArray.forEach(i =>{
-        //Variable to hold the health value
-        var HealthValue = JSON.parse(EnemiesToFight[EnemyCount].Health);
-        //Variable to hold the Mana Value
-        var ManaValue = JSON.parse(EnemiesToFight[EnemyCount].Mana);
-        //place the Health in de battle screen
-        document.getElementById(i).innerHTML = 'Health: <progress value="'+HealthValue+'" max="'+HealthValue+'" class="HealthBar"></progress><br>Mana: <progress value="'+ManaValue+'" max="'+ManaValue+'" class="ManaBar"></progress>';
-        //increase EnemyCount to iterate the next enemy
-        EnemyCount++;
-    });
+    })
 }
-
