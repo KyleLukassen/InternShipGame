@@ -111,6 +111,12 @@
 .HealthBarHolder{
     grid-area: HealthBarHolder;
 }
+.ManaIntHolder{
+    grid-area: ManaIntHolder;
+}
+.ManaBarHolder{
+    grid-area: ManaBarHolder;
+}
 /*Some styling for the Error function activator*/
 #ErrorActivator{
     width: 0px;

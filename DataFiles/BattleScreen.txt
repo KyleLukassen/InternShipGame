@@ -13,7 +13,8 @@
 <div id="LevelContainer1" class="LevelHolder"></div>
 <div id="HealthContainer1" class="HealthIntHolder"></div>
 <div id="HealthBar1" class="HealthBarHolder"></div>
-<div id="HealthBar1" ></div>
+<div id="ManaContainer1" class="ManaIntHolder"></div>
+<div id="ManaBar1" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllyNPC1" class="Character">
@@ -21,6 +22,8 @@
 <div id="LevelContainer2" class="LevelHolder"></div>
 <div id="HealthContainer2" class="HealthIntHolder"></div>
 <div id="HealthBar2" class="HealthBarHolder"></div>
+<div id="ManaContainer2" class="ManaIntHolder"></div>
+<div id="ManaBar2" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllyNPC2" class="Character">
@@ -28,6 +31,8 @@
 <div id="LevelContainer3" class="LevelHolder"></div>
 <div id="HealthContainer3" class="HealthIntHolder"></div>
 <div id="HealthBar3" class="HealthBarHolder"></div>
+<div id="ManaContainer3" class="ManaIntHolder"></div>
+<div id="ManaBar3" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllyNPC3" class="Character">
@@ -35,6 +40,8 @@
 <div id="LevelContainer4" class="LevelHolder"></div>
 <div id="HealthContainer4" class="HealthIntHolder"></div>
 <div id="HealthBar4" class="HealthBarHolder"></div>
+<div id="ManaContainer4" class="ManaIntHolder"></div>
+<div id="ManaBar4" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy1" class="Character">
@@ -42,6 +49,8 @@
 <div id="LevelContainer5" class="LevelHolder"></div>
 <div id="HealthContainer5" class="HealthIntHolder"></div>
 <div id="HealthBar5" class="HealthBarHolder"></div>
+<div id="ManaContainer5" class="ManaIntHolder"></div>
+<div id="ManaBar5" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy2" class="Character">
@@ -49,6 +58,8 @@
 <div id="LevelContainer6" class="LevelHolder"></div>
 <div id="HealthContainer6" class="HealthIntHolder"></div>
 <div id="HealthBar6" class="HealthBarHolder"></div>
+<div id="ManaContainer6" class="ManaIntHolder"></div>
+<div id="ManaBar6" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy3" class="Character">
@@ -56,6 +67,8 @@
 <div id="LevelContainer7" class="LevelHolder"></div>
 <div id="HealthContainer7" class="HealthIntHolder"></div>
 <div id="HealthBar7" class="HealthBarHolder"></div>
+<div id="ManaContainer7" class="ManaIntHolder"></div>
+<div id="ManaBar7" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy4" class="Character">
@@ -63,6 +76,8 @@
 <div id="LevelContainer8" class="LevelHolder"></div>
 <div id="HealthContainer8" class="HealthIntHolder"></div>
 <div id="HealthBar8" class="HealthBarHolder"></div>
+<div id="ManaContainer8" class="ManaIntHolder"></div>
+<div id="ManaBar8" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllySummons"></div>

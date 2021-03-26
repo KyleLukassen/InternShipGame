@@ -3,11 +3,16 @@ var PartyNameArray = ["NameContainer1", "NameContainer2", "NameContainer3", "Nam
 var PartyLvlArray = ["LevelContainer1","LevelContainer2","LevelContainer3","LevelContainer4"];
 var PartyHealthArray = ["HealthContainer1", "HealthContainer2", "HealthContainer3", "HealthContainer4"];
 var PartyHPBarArray = ["HealthBar1", "HealthBar2", "HealthBar3", "HealthBar4"];
+var PartyManaArray = ["ManaContainer1", "ManaContainer2", "ManaContainer3", "ManaContainer4"];
+var PartyManaBarArray = ["ManaBar1", "ManaBar2", "ManaBar3", "ManaBar4"];
+
 
 var EnemyNameArray = ["NameContainer5", "NameContainer6", "NameContainer7", "NameContainer8"];
 var EnemyLvlArray = ["LevelContainer5","LevelContainer6","LevelContainer7","LevelContainer8"];
 var EnemyHealthArray = ["HealthContainer5", "HealthContainer6", "HealthContainer7", "HealthContainer8"];
 var EnemyHPBarArray = ["HealthBar5", "HealthBar6", "HealthBar7", "HealthBar8"];
+var EnemyManaArray = ["ManaContainer5", "ManaContainer6", "ManaContainer7", "ManaContainer8"];
+var EnemyManaBarArray = ["ManaBar5", "ManaBar6", "ManaBar7", "ManaBar8"];
 
 
 function FileArrayRead(EnemyTextfile, PartyTextFile){
@@ -53,10 +58,15 @@ function BattleScreenFillParty(PartyArray){
             document.getElementById(PartyNameArray[i.BattlePosition-1]).innerHTML = "Name: " + i.Name;
             //Place the level of the party member
             document.getElementById(PartyLvlArray[i.BattlePosition-1]).innerHTML = "Level: " + i.Level;
-            //PLace the health and Mana of the party member
-            document.getElementById(PartyHealthArray[i.BattlePosition-1]).innerHTML = "Health: " + i.Health+"<br>Mana: "+i.Mana;
-            //PLace the health bar and mana bar of the party member
-            document.getElementById(PartyHPBarArray[i.BattlePosition-1]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress><br>Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
+            //PLace the health of the party member
+            document.getElementById(PartyHealthArray[i.BattlePosition-1]).innerHTML = "Health: " + i.Health;
+            //PLace the health bar of the party member
+            document.getElementById(PartyHPBarArray[i.BattlePosition-1]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress>';
+            //PLace the Mana of the party member
+            document.getElementById(PartyManaArray[i.BattlePosition-1]).innerHTML = "Mana: "+i.Mana;
+            //PLace the mana bar of the party member
+            document.getElementById(PartyManaBarArray[i.BattlePosition-1]).innerHTML = 'Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
+            
         }
     });
 }
@@ -112,10 +122,14 @@ function BattleScreenFillEnemy(EnemiesToFight){
         document.getElementById(EnemyNameArray[EnemyCount]).innerHTML = "Name: " + i.Name;
         //place the level of the enemy
         document.getElementById(EnemyLvlArray[EnemyCount]).innerHTML = "Level: " + i.Level;
-        //place the health and mana of the enemy as numbers
-        document.getElementById(EnemyHealthArray[EnemyCount]).innerHTML = "Health: " + i.Health+"<br>Mana: "+i.Mana;
-        //place the health and mana of the enemy as bars
-        document.getElementById(EnemyHPBarArray[EnemyCount]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress><br>Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
+        //PLace the health of the Enemy
+        document.getElementById(EnemyHealthArray[EnemyCount]).innerHTML = "Health: " + i.Health;
+        //PLace the health bar of the Enemy
+        document.getElementById(EnemyHPBarArray[EnemyCount]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress>';
+        //PLace the Mana of the Enemy
+        document.getElementById(EnemyManaArray[EnemyCount]).innerHTML = "Mana: "+i.Mana;
+        //PLace the mana bar of the Enemy
+        document.getElementById(EnemyManaBarArray[EnemyCount]).innerHTML = 'Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
         EnemyCount++;
     })
 }
