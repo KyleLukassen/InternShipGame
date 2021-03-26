@@ -12,75 +12,77 @@
 <div id="NameContainer1" class="NameHolder"></div>
 <div id="LevelContainer1" class="LevelHolder"></div>
 <div id="HealthContainer1" class="HealthIntHolder"></div>
-<div id="HealthBar1" class="HealthBarHolder"></div>
+<div id="HealthBarContainer1" class="HealthBarHolder"></div>
 <div id="ManaContainer1" class="ManaIntHolder"></div>
-<div id="ManaBar1" class="ManaBarHolder"></div>
+<div id="ManaBarContainer1" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllyNPC1" class="Character">
 <div id="NameContainer2" class="NameHolder"></div>
 <div id="LevelContainer2" class="LevelHolder"></div>
 <div id="HealthContainer2" class="HealthIntHolder"></div>
-<div id="HealthBar2" class="HealthBarHolder"></div>
+<div id="HealthBarContainer2" class="HealthBarHolder"></div>
 <div id="ManaContainer2" class="ManaIntHolder"></div>
-<div id="ManaBar2" class="ManaBarHolder"></div>
+<div id="ManaBarContainer2" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllyNPC2" class="Character">
 <div id="NameContainer3" class="NameHolder"></div>
 <div id="LevelContainer3" class="LevelHolder"></div>
 <div id="HealthContainer3" class="HealthIntHolder"></div>
-<div id="HealthBar3" class="HealthBarHolder"></div>
+<div id="HealthBarContainer3" class="HealthBarHolder"></div>
 <div id="ManaContainer3" class="ManaIntHolder"></div>
-<div id="ManaBar3" class="ManaBarHolder"></div>
+<div id="ManaBarContainer3" class="ManaBarHolder"></div>
 </div>
 
 <div id="AllyNPC3" class="Character">
 <div id="NameContainer4" class="NameHolder"></div>
 <div id="LevelContainer4" class="LevelHolder"></div>
 <div id="HealthContainer4" class="HealthIntHolder"></div>
-<div id="HealthBar4" class="HealthBarHolder"></div>
+<div id="HealthBarContainer4" class="HealthBarHolder"></div>
 <div id="ManaContainer4" class="ManaIntHolder"></div>
-<div id="ManaBar4" class="ManaBarHolder"></div>
+<div id="ManaBarContainer4" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy1" class="Character">
 <div id="NameContainer5" class="NameHolder"></div>
 <div id="LevelContainer5" class="LevelHolder"></div>
 <div id="HealthContainer5" class="HealthIntHolder"></div>
-<div id="HealthBar5" class="HealthBarHolder"></div>
+<div id="HealthBarContainer5" class="HealthBarHolder"></div>
 <div id="ManaContainer5" class="ManaIntHolder"></div>
-<div id="ManaBar5" class="ManaBarHolder"></div>
+<div id="ManaBarContainer5" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy2" class="Character">
 <div id="NameContainer6" class="NameHolder"></div>
 <div id="LevelContainer6" class="LevelHolder"></div>
 <div id="HealthContainer6" class="HealthIntHolder"></div>
-<div id="HealthBar6" class="HealthBarHolder"></div>
+<div id="HealthBarContainer6" class="HealthBarHolder"></div>
 <div id="ManaContainer6" class="ManaIntHolder"></div>
-<div id="ManaBar6" class="ManaBarHolder"></div>
+<div id="ManaBarContainer6" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy3" class="Character">
 <div id="NameContainer7" class="NameHolder"></div>
 <div id="LevelContainer7" class="LevelHolder"></div>
 <div id="HealthContainer7" class="HealthIntHolder"></div>
-<div id="HealthBar7" class="HealthBarHolder"></div>
+<div id="HealthBarContainer7" class="HealthBarHolder"></div>
 <div id="ManaContainer7" class="ManaIntHolder"></div>
-<div id="ManaBar7" class="ManaBarHolder"></div>
+<div id="ManaBarContainer7" class="ManaBarHolder"></div>
 </div>
 
 <div id="Enemy4" class="Character">
 <div id="NameContainer8" class="NameHolder"></div>
 <div id="LevelContainer8" class="LevelHolder"></div>
 <div id="HealthContainer8" class="HealthIntHolder"></div>
-<div id="HealthBar8" class="HealthBarHolder"></div>
+<div id="HealthBarContainer8" class="HealthBarHolder"></div>
 <div id="ManaContainer8" class="ManaIntHolder"></div>
-<div id="ManaBar8" class="ManaBarHolder"></div>
+<div id="ManaBarContainer8" class="ManaBarHolder"></div>
 </div>
 
-<div id="AllySummons"></div>
+<div id="AllySummons">
+<progress  value="100" max="100" class="HealthBar" id="Test"></progress>
+</div>
 <div id="EnemySummons"></div>
 
 <div id="AllyCharacterDetails">

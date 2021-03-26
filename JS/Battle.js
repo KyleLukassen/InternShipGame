@@ -2,17 +2,17 @@ var IconArray = ["Icon1", "Icon2", "Icon3", "Icon4", "Icon5", "Icon6", "Icon7", 
 var PartyNameArray = ["NameContainer1", "NameContainer2", "NameContainer3", "NameContainer4"];
 var PartyLvlArray = ["LevelContainer1","LevelContainer2","LevelContainer3","LevelContainer4"];
 var PartyHealthArray = ["HealthContainer1", "HealthContainer2", "HealthContainer3", "HealthContainer4"];
-var PartyHPBarArray = ["HealthBar1", "HealthBar2", "HealthBar3", "HealthBar4"];
+var PartyHPBarArray = ["HealthBarContainer1", "HealthBarContainer2", "HealthBarContainer3", "HealthBarContainer4"];
 var PartyManaArray = ["ManaContainer1", "ManaContainer2", "ManaContainer3", "ManaContainer4"];
-var PartyManaBarArray = ["ManaBar1", "ManaBar2", "ManaBar3", "ManaBar4"];
+var PartyManaBarArray = ["ManaBarContainer1", "ManaBarContainer2", "ManaBarContainer3", "ManaBarContainer4"];
 
 
 var EnemyNameArray = ["NameContainer5", "NameContainer6", "NameContainer7", "NameContainer8"];
 var EnemyLvlArray = ["LevelContainer5","LevelContainer6","LevelContainer7","LevelContainer8"];
 var EnemyHealthArray = ["HealthContainer5", "HealthContainer6", "HealthContainer7", "HealthContainer8"];
-var EnemyHPBarArray = ["HealthBar5", "HealthBar6", "HealthBar7", "HealthBar8"];
+var EnemyHPBarArray = ["HealthBarContainer5", "HealthBarContainer6", "HealthBarContainer7", "HealthBarContainer8"];
 var EnemyManaArray = ["ManaContainer5", "ManaContainer6", "ManaContainer7", "ManaContainer8"];
-var EnemyManaBarArray = ["ManaBar5", "ManaBar6", "ManaBar7", "ManaBar8"];
+var EnemyManaBarArray = ["ManaBarContainer5", "ManaBarContainer6", "ManaBarContainer7", "ManaBarContainer8"];
 
 
 function FileArrayRead(EnemyTextfile, PartyTextFile){
@@ -61,11 +61,11 @@ function BattleScreenFillParty(PartyArray){
             //PLace the health of the party member
             document.getElementById(PartyHealthArray[i.BattlePosition-1]).innerHTML = "Health: " + i.Health;
             //PLace the health bar of the party member
-            document.getElementById(PartyHPBarArray[i.BattlePosition-1]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress>';
+            document.getElementById(PartyHPBarArray[i.BattlePosition-1]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar" id="HealthBar'+i.BattlePosition+'"></progress>';
             //PLace the Mana of the party member
             document.getElementById(PartyManaArray[i.BattlePosition-1]).innerHTML = "Mana: "+i.Mana;
             //PLace the mana bar of the party member
-            document.getElementById(PartyManaBarArray[i.BattlePosition-1]).innerHTML = 'Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
+            document.getElementById(PartyManaBarArray[i.BattlePosition-1]).innerHTML = 'Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar" id="ManaBar'+i.BattlePosition+'"></progress>';
             
         }
     });
@@ -125,18 +125,16 @@ function BattleScreenFillEnemy(EnemiesToFight){
         //PLace the health of the Enemy
         document.getElementById(EnemyHealthArray[EnemyCount]).innerHTML = "Health: " + i.Health;
         //PLace the health bar of the Enemy
-        document.getElementById(EnemyHPBarArray[EnemyCount]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar"></progress>';
+        document.getElementById(EnemyHPBarArray[EnemyCount]).innerHTML = 'Health: <progress value="'+i.Health+'" max="'+i.Health+'" class="HealthBar" id="HealthBar'+(EnemyCount+5)+'"></progress>';
         //PLace the Mana of the Enemy
         document.getElementById(EnemyManaArray[EnemyCount]).innerHTML = "Mana: "+i.Mana;
         //PLace the mana bar of the Enemy
-        document.getElementById(EnemyManaBarArray[EnemyCount]).innerHTML = 'Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar"></progress>';
+        document.getElementById(EnemyManaBarArray[EnemyCount]).innerHTML = 'Mana: <progress value="'+i.Mana+'" max="'+i.Mana+'" class="ManaBar" id="HealthBar'+(EnemyCount+5)+'"></progress>';
         EnemyCount++;
     })
 }
 
 function EndOfTurn(){
-    console.log("End Of turn");
-    let target1 = document.getElementsByClassName("HealthBar");
-    let target2 = document.getElementById("HealthBar6");
-    target1.value -=10;
+    let health = document.getElementById("HealthBar6")
+health.value -= 10;
 }
