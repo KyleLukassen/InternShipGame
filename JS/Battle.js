@@ -119,3 +119,10 @@ function BattleScreenFillEnemy(EnemiesToFight){
         EnemyCount++;
     })
 }
+
+function EndOfTurn(){
+    console.log("End Of turn");
+    let target1 = document.getElementsByClassName("HealthBar");
+    let target2 = document.getElementById("HealthBar6");
+    target1.value -=10;
+}

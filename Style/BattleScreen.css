@@ -15,135 +15,66 @@
     grid-template-columns: 100px auto 100px auto;
     grid-template-rows: 100px 100px 100px 100px auto;
 }
-/*Assigns the div to the grid spaces and applies some styling*/
-#Icon1{
-    grid-area: NPCIcon1;
+/*Styling and location of the icons*/
+.Icon{
     border-right: black 2px ridge;
-    border-bottom: black 2px ridge;
     border-left: yellow 2px ridge;
+    border-bottom: black 2px ridge;
+    padding: 12px;
+}
+#Icon1{
+    grid-area: NPCIcon1;   
 }
 #Icon2{
     grid-area: NPCIcon2;
-    border-right: black 2px ridge;
-    border-bottom: black 2px ridge;
-    border-left: yellow 2px ridge;
 }
 #Icon3{
     grid-area: NPCIcon3;
-    border-right: black 2px ridge;
-    border-bottom: black 2px ridge;
-    border-left: yellow 2px ridge;
 }
 #Icon4{
     grid-area: NPCIcon4;
-    border-right: black 2px ridge;
-    border-left: yellow 2px ridge;
-    border-bottom: yellow 2px ridge;
 }
 #Icon5{
     grid-area: NPCIcon5;
-    border-right: black 2px ridge;
-    border-bottom: black 2px ridge;
-    border-left: yellow 2px ridge;
 }
 #Icon6{
     grid-area: NPCIcon6;
-    border-right: black 2px ridge;
-    border-bottom: black 2px ridge;
-    border-left: yellow 2px ridge;
 }
 #Icon7{
     grid-area: NPCIcon7;
-    border-right: black 2px ridge;
-    border-bottom: black 2px ridge;
-    border-left: yellow 2px ridge;
 }
 #Icon8{
     grid-area: NPCIcon8;
-    border-left: yellow 2px ridge;
-    border-right: black 2px ridge;
-    border-bottom: yellow 2px ridge;
 }
+
+/*Where each character is placed in the battle screen*/
+/*Player character and allies*/
 #PlayerAvatar{
-    display: grid;
     grid-area: PlayerAvatar;
-    border-bottom: black 2px ridge;
-    grid-template-areas: 
-    "PlayerName PlayerLevel"
-    "PlayerHealth PlayerHPBar";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
 #AllyNPC1{
-    display: grid;
     grid-area: AllyNPC1;
-    border-bottom: black 2px ridge;
-    grid-template-areas: 
-    "AllyName1 AllyLevel1"
-    "AllyHealth1 AllyHPBar1";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
 #AllyNPC2{
-    display: grid;
     grid-area: AllyNPC2;
-    border-bottom: black 2px ridge;
-    grid-template-areas: 
-    "AllyName2 AllyLevel2"
-    "AllyHealth2 AllyHPBar2";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
 #AllyNPC3{
-    display: grid;
     grid-area: AllyNPC3;
-    border-bottom: yellow 2px ridge;
-    grid-template-areas: 
-    "AllyName3 AllyLevel3"
-    "AllyHealth3 AllyHPBar3";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
+/*Enemies*/
 #Enemy1{
-    display: grid;
     grid-area: Enemy1;
-    border-bottom: black 2px ridge;
-    grid-template-areas: 
-    "EnemyName1 EnemyLevel1"
-    "EnemyHealth1 EnemyHPBar1";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
 #Enemy2{
-    display: grid;
     grid-area: Enemy2;
-    border-bottom: black 2px ridge;
-    grid-template-areas: 
-    "EnemyName2 EnemyLevel2"
-    "EnemyHealth2 EnemyHPBar2";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
 #Enemy3{
-    display: grid;
     grid-area: Enemy3;
-    border-bottom: black 2px ridge;
-    grid-template-areas: 
-    "EnemyName3 EnemyLevel3"
-    "EnemyHealth3 EnemyHPBar3";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
 #Enemy4{
-    display: grid;
     grid-area: Enemy4;
-    border-bottom: yellow 2px ridge;
-    grid-template-areas: 
-    "EnemyName4 EnemyLevel4"
-    "EnemyHealth4 EnemyHPBar4";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50px 50px;
 }
+/*Remaining Area's*/
 #AllySummons{
     grid-area: AllySummons;
 }
@@ -156,110 +87,29 @@
 #EnemyCharacterDetails{
     grid-area: EnemyDetails;
 }
-/*The areas to be placed in the character area of the battle screen grid*/
-/*Player Avatar*/
-#NameContainer1{
-    grid-area: PlayerName;
+/*Define the Character area*/
+.Character{
+    display: grid;
+    border-bottom: black 2px ridge;
+    grid-template-areas: 
+    "NameHolder LevelHolder"
+    "HealthIntHolder HealthBarHolder"
+    "ManaIntHolder ManaBarHolder";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50px 25px 25px;
 }
-#LevelContainer1{
-    grid-area: PlayerLevel;
+/*Where the Area's are placed in the character area*/
+.NameHolder{
+    grid-area: NameHolder;
 }
-#HealthContainer1{
-    grid-area: PlayerHealth;
+.LevelHolder{
+    grid-area: LevelHolder;
 }
-#HealthBar1{
-    grid-area: PlayerHPBar;
+.HealthIntHolder{
+    grid-area: HealthIntHolder;
 }
-/*Ally NPC1*/
-#NameContainer2{
-    grid-area: AllyName1;
-}
-#LevelContainer2{
-    grid-area: AllyLevel1;
-}
-#HealthContainer2{
-    grid-area: AllyHealth1;
-}
-#HealthBar2{
-    grid-area: AllyHPBar1;
-}
-/*Ally NPC 2*/
-#NameContainer3{
-    grid-area: AllyName2;
-}
-#LevelContainer3{
-    grid-area: AllyLevel2;
-}
-#HealthContainer3{
-    grid-area: AllyHealth2;
-}
-#HealthBar3{
-    grid-area: AllyHPBar2;
-}
-/*Ally NPC 3*/
-#NameContainer4{
-    grid-area: AllyName3;
-}
-#LevelContainer4{
-    grid-area: AllyLevel3;
-}
-#HealthContainer4{
-    grid-area: AllyHealth3;
-}
-#HealthBar4{
-    grid-area: AllyHPBar3;
-}
-/*Enemy 1*/
-#NameContainer5{
-    grid-area: EnemyName1;
-}
-#LevelContainer5{
-    grid-area: EnemyLevel1;
-}
-#HealthContainer5{
-    grid-area: EnemyHealth1;
-}
-#HealthBar5{
-    grid-area: EnemyHPBar1;
-}
-/*Enemy 2*/
-#NameContainer6{
-    grid-area: EnemyName2;
-}
-#LevelContainer6{
-    grid-area: EnemyLevel2;
-}
-#HealthContainer6{
-    grid-area: EnemyHealth2;
-}
-#HealthBar6{
-    grid-area: EnemyHPBar2;
-}
-/*Enemy 3*/
-#NameContainer7{
-    grid-area: EnemyName3;
-}
-#LevelContainer7{
-    grid-area: EnemyLevel3;
-}
-#HealthContainer7{
-    grid-area: EnemyHealth3;
-}
-#HealthBar7{
-    grid-area: EnemyHPBar3;
-}
-/*Enemy 4*/
-#NameContainer8{
-    grid-area: EnemyName4;
-}
-#LevelContainer8{
-    grid-area: EnemyLevel4;
-}
-#HealthContainer8{
-    grid-area: EnemyHealth4;
-}
-#HealthBar8{
-    grid-area: EnemyHPBar4;
+.HealthBarHolder{
+    grid-area: HealthBarHolder;
 }
 /*Some styling for the Error function activator*/
 #ErrorActivator{

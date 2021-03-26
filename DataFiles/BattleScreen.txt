@@ -1,73 +1,76 @@
 <div class="BattleScreen">
-<div id="Icon1"><img id="ErrorActivator" src onerror="FileArrayRead('./DataFiles/EnemyData.txt','./DataFiles/PartyData.txt')"></div>
-<div id="Icon2"></div>
-<div id="Icon3"></div>
-<div id="Icon4"></div>
-<div id="Icon5"></div>
-<div id="Icon6"></div>
-<div id="Icon7"></div>
-<div id="Icon8"></div>
+<div id="Icon1" class="Icon"><img id="ErrorActivator" src onerror="FileArrayRead('./DataFiles/EnemyData.txt','./DataFiles/PartyData.txt')"></div>
+<div id="Icon2" class="Icon"></div>
+<div id="Icon3" class="Icon"></div>
+<div id="Icon4" class="Icon"></div>
+<div id="Icon5" class="Icon"></div>
+<div id="Icon6" class="Icon"></div>
+<div id="Icon7" class="Icon"></div>
+<div id="Icon8" class="Icon"></div>
 
 <div id="PlayerAvatar" class="Character">
-<div id="NameContainer1"></div>
-<div id="LevelContainer1"></div>
-<div id="HealthContainer1"></div>
-<div id="HealthBar1"></div>
+<div id="NameContainer1" class="NameHolder"></div>
+<div id="LevelContainer1" class="LevelHolder"></div>
+<div id="HealthContainer1" class="HealthIntHolder"></div>
+<div id="HealthBar1" class="HealthBarHolder"></div>
+<div id="HealthBar1" ></div>
 </div>
 
 <div id="AllyNPC1" class="Character">
-<div id="NameContainer2"></div>
-<div id="LevelContainer2"></div>
-<div id="HealthContainer2"></div>
-<div id="HealthBar2"></div>
+<div id="NameContainer2" class="NameHolder"></div>
+<div id="LevelContainer2" class="LevelHolder"></div>
+<div id="HealthContainer2" class="HealthIntHolder"></div>
+<div id="HealthBar2" class="HealthBarHolder"></div>
 </div>
 
 <div id="AllyNPC2" class="Character">
-<div id="NameContainer3"></div>
-<div id="LevelContainer3"></div>
-<div id="HealthContainer3"></div>
-<div id="HealthBar3"></div>
+<div id="NameContainer3" class="NameHolder"></div>
+<div id="LevelContainer3" class="LevelHolder"></div>
+<div id="HealthContainer3" class="HealthIntHolder"></div>
+<div id="HealthBar3" class="HealthBarHolder"></div>
 </div>
 
 <div id="AllyNPC3" class="Character">
-<div id="NameContainer4"></div>
-<div id="LevelContainer4"></div>
-<div id="HealthContainer4"></div>
-<div id="HealthBar4"></div>
+<div id="NameContainer4" class="NameHolder"></div>
+<div id="LevelContainer4" class="LevelHolder"></div>
+<div id="HealthContainer4" class="HealthIntHolder"></div>
+<div id="HealthBar4" class="HealthBarHolder"></div>
 </div>
 
 <div id="Enemy1" class="Character">
-<div id="NameContainer5"></div>
-<div id="LevelContainer5"></div>
-<div id="HealthContainer5"></div>
-<div id="HealthBar5"></div>
+<div id="NameContainer5" class="NameHolder"></div>
+<div id="LevelContainer5" class="LevelHolder"></div>
+<div id="HealthContainer5" class="HealthIntHolder"></div>
+<div id="HealthBar5" class="HealthBarHolder"></div>
 </div>
 
 <div id="Enemy2" class="Character">
-<div id="NameContainer6"></div>
-<div id="LevelContainer6"></div>
-<div id="HealthContainer6"></div>
-<div id="HealthBar6"></div>
+<div id="NameContainer6" class="NameHolder"></div>
+<div id="LevelContainer6" class="LevelHolder"></div>
+<div id="HealthContainer6" class="HealthIntHolder"></div>
+<div id="HealthBar6" class="HealthBarHolder"></div>
 </div>
 
 <div id="Enemy3" class="Character">
-<div id="NameContainer7"></div>
-<div id="LevelContainer7"></div>
-<div id="HealthContainer7"></div>
-<div id="HealthBar7"></div>
+<div id="NameContainer7" class="NameHolder"></div>
+<div id="LevelContainer7" class="LevelHolder"></div>
+<div id="HealthContainer7" class="HealthIntHolder"></div>
+<div id="HealthBar7" class="HealthBarHolder"></div>
 </div>
 
 <div id="Enemy4" class="Character">
-<div id="NameContainer8"></div>
-<div id="LevelContainer8"></div>
-<div id="HealthContainer8"></div>
-<div id="HealthBar8"></div>
+<div id="NameContainer8" class="NameHolder"></div>
+<div id="LevelContainer8" class="LevelHolder"></div>
+<div id="HealthContainer8" class="HealthIntHolder"></div>
+<div id="HealthBar8" class="HealthBarHolder"></div>
 </div>
 
 <div id="AllySummons"></div>
 <div id="EnemySummons"></div>
 
-<div id="AllyCharacterDetails"></div>
+<div id="AllyCharacterDetails">
+<button onclick="EndOfTurn()"> End Turn</button>
+</div>
 <div id="EnemyCharacterDetails"></div>
 
 </div>
