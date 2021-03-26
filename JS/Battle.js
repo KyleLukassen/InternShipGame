@@ -136,5 +136,5 @@ function BattleScreenFillEnemy(EnemiesToFight){
 
 function EndOfTurn(){
     let health = document.getElementById("HealthBar6")
-health.value -= 10;
+    health.value -= 10;
 }
