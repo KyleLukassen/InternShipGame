@@ -148,22 +148,30 @@ function EndOfTurn(){
             MemberDamage = JSON.stringify(i.Attack);
             //a loop to make sure a party member does not target an enemie with no health remaining
             while(TargetFound == false){
-                //declare variable to check
+                //Select a random enemie
                 var SelectedTarget = Math.floor(Math.random() * (EnemiesToFight.length));
+                //declare enemie health to smaller variable for easier access
                 var TargetHealth = document.getElementById("HealthBar"+(SelectedTarget+5)).value
+                //declare enemie Name to smaller variable for easier access
                 var TargetName = document.getElementById("NameContainer"+(SelectedTarget+5)).innerHTML;
-                console.log(TargetHealth);
+                //check if the selected enemy stil has health remianing
                 if(TargetHealth != 0){
+                    //deal damage to the selected enemy
                     document.getElementById("HealthBar"+(SelectedTarget+5)).value -= i.Attack;
+                    //note down the action
                     CombatAction = (MemberName+" Attacked "+TargetName+" for "+MemberDamage+" damage.<br>");
-                    console.log(CombatAction);
+                    //add the action to the Combat log
                     CombatLog = CombatLog.concat(CombatAction);
+                    //set Target found to true to end the loop
                     TargetFound = true;
                 }
             }
         }
     });
+    //easy divider
     console.log("End of turn-combat");
+    //display Combat Log
     document.getElementById("EnemyCharacterDetails").innerHTML = CombatLog;
+    //Empty combat log for next turn
     CombatLog = "";
 }
