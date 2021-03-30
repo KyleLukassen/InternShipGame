@@ -143,6 +143,9 @@ function EndOfTurn(){
         if(i.BattlePosition != null){
             //a variable to check if the party member found a target
             var TargetFound = false;
+            //convert Member data to string to add to the combat log
+            MemberName = JSON.stringify(i.Name);
+            MemberDamage = JSON.stringify(i.Attack);
             //a loop to make sure a party member does not target an enemie with no health remaining
             while(TargetFound == false){
                 //declare variable to check
@@ -152,7 +155,7 @@ function EndOfTurn(){
                 console.log(TargetHealth);
                 if(TargetHealth != 0){
                     document.getElementById("HealthBar"+(SelectedTarget+5)).value -= i.Attack;
-                    CombatAction = ("Attacked "+TargetName+".<br>");
+                    CombatAction = (MemberName+" Attacked "+TargetName+" for "+MemberDamage+" damage.<br>");
                     console.log(CombatAction);
                     CombatLog = CombatLog.concat(CombatAction);
                     TargetFound = true;
