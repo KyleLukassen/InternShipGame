@@ -6,6 +6,7 @@
         "Level": 1,
         "Health": 50,
         "Mana": 50,
+        "Attack": 20,
         "Icon": "./Images/Placeholder.png"
     },
     {
@@ -15,6 +16,7 @@
         "Level": 1,
         "Health": 35,
         "Mana": 65,
+        "Attack": 15,
         "Icon": "./Images/Placeholder.png"
     },
     {
@@ -24,6 +26,7 @@
         "Level": 1,
         "Health": 35,
         "Mana": 65,
+        "Attack": 10,
         "Icon": "./Images/Placeholder.png"
     },
     {
@@ -33,6 +36,7 @@
         "Level": 1,
         "Health": 35,
         "Mana": 65,
+        "Attack": 10,
         "Icon": "./Images/Placeholder.png"
     }
 ]

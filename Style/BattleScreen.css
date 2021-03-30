@@ -97,6 +97,7 @@
     "ManaIntHolder ManaBarHolder";
     grid-template-columns: 40% 60%;
     grid-template-rows: 50px 25px 25px;
+    min-width: 400px;
 }
 /*Where the Area's are placed in the character area*/
 .NameHolder{

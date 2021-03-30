@@ -14,6 +14,7 @@ var EnemyHPBarArray = ["HealthBarContainer5", "HealthBarContainer6", "HealthBarC
 var EnemyManaArray = ["ManaContainer5", "ManaContainer6", "ManaContainer7", "ManaContainer8"];
 var EnemyManaBarArray = ["ManaBarContainer5", "ManaBarContainer6", "ManaBarContainer7", "ManaBarContainer8"];
 
+var CombatLog = "";
 
 function FileArrayRead(EnemyTextfile, PartyTextFile){
     //Start function to read Text file with Enemy data
@@ -41,7 +42,7 @@ function OpenFileParty(TextFile){
                                 .replace(/\\f/g, "\\f");
             s = FileArrayString.replace(/[\u0000-\u0019]+/g,"");
             //parse response text to JSON
-            var PartyArray = JSON.parse(s); 
+            PartyArray = JSON.parse(s); 
             //Initiates Party Selection
             BattleScreenFillParty(PartyArray);
         }
@@ -101,7 +102,7 @@ function OpenFileEnemy(TextFile){
 
 function EnemySelection(EnemyArray){
     //create array to fill with selected enemies
-    var EnemiesToFight = [];
+    EnemiesToFight = [];
     //continue running the function until there 4 enemies to fight
     while (EnemiesToFight.length < 4){
         //generate random number
@@ -135,6 +136,31 @@ function BattleScreenFillEnemy(EnemiesToFight){
 }
 
 function EndOfTurn(){
-    let health = document.getElementById("HealthBar6")
-    health.value -= 10;
+    
+    //go through each party member
+    PartyArray.forEach( i => {
+        // if the party member has a defined battle position they are in the fight and can perform an action
+        if(i.BattlePosition != null){
+            //a variable to check if the party member found a target
+            var TargetFound = false;
+            //a loop to make sure a party member does not target an enemie with no health remaining
+            while(TargetFound == false){
+                //declare variable to check
+                var SelectedTarget = Math.floor(Math.random() * (EnemiesToFight.length));
+                var TargetHealth = document.getElementById("HealthBar"+(SelectedTarget+5)).value
+                var TargetName = document.getElementById("NameContainer"+(SelectedTarget+5)).innerHTML;
+                console.log(TargetHealth);
+                if(TargetHealth != 0){
+                    document.getElementById("HealthBar"+(SelectedTarget+5)).value -= i.Attack;
+                    CombatAction = ("Attacked "+TargetName+".<br>");
+                    console.log(CombatAction);
+                    CombatLog = CombatLog.concat(CombatAction);
+                    TargetFound = true;
+                }
+            }
+        }
+    });
+    console.log("End of turn-combat");
+    document.getElementById("EnemyCharacterDetails").innerHTML = CombatLog;
+    CombatLog = "";
 }
