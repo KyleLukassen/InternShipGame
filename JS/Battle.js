@@ -137,41 +137,112 @@ function BattleScreenFillEnemy(EnemiesToFight){
 
 function EndOfTurn(){
     
-    //go through each party member
+    //go through each party member and deterine their actions for the turn.
     PartyArray.forEach( i => {
         // if the party member has a defined battle position they are in the fight and can perform an action
         if(i.BattlePosition != null){
-            //a variable to check if the party member found a target
-            var TargetFound = false;
-            //convert Member data to string to add to the combat log
-            MemberName = JSON.stringify(i.Name);
-            MemberDamage = JSON.stringify(i.Attack);
-            //a loop to make sure a party member does not target an enemie with no health remaining
-            while(TargetFound == false){
-                //Select a random enemie
-                var SelectedTarget = Math.floor(Math.random() * (EnemiesToFight.length));
-                //declare enemie health to smaller variable for easier access
-                var TargetHealth = document.getElementById("HealthBar"+(SelectedTarget+5)).value
-                //declare enemie Name to smaller variable for easier access
-                var TargetName = document.getElementById("NameContainer"+(SelectedTarget+5)).innerHTML;
-                //check if the selected enemy stil has health remianing
-                if(TargetHealth != 0){
-                    //deal damage to the selected enemy
-                    document.getElementById("HealthBar"+(SelectedTarget+5)).value -= i.Attack;
-                    //note down the action
-                    CombatAction = (MemberName+" Attacked "+TargetName+" for "+MemberDamage+" damage.<br>");
-                    //add the action to the Combat log
-                    CombatLog = CombatLog.concat(CombatAction);
-                    //set Target found to true to end the loop
-                    TargetFound = true;
+            //combine all enemy health values 
+            var CombinedEnemyHealth = document.getElementById("HealthBar5").value + document.getElementById("HealthBar6").value + document.getElementById("HealthBar7").value + document.getElementById("HealthBar8").value;
+            //if there are still enemies on the field with health remaining, proceed with the combat
+            if(CombinedEnemyHealth != 0){
+                //a variable to check if the party member found a target
+                var TargetFound = false;
+                //convert Member data to string to add to the combat log
+                MemberName = JSON.stringify(i.Name);
+                //clean up the variable for proper viewing
+                MemberName = MemberName.replace(/"/g,'');
+                //turn the attack integer of the party member into a string to insert into the combat log
+                MemberDamage = JSON.stringify(i.Attack);
+                //a loop to make sure a party member does not target an enemy with no health remaining
+                while(TargetFound == false){
+                    //Select a random enemie
+                    var SelectedTarget = Math.floor(Math.random() * (EnemiesToFight.length));
+                    //declare enemie health to smaller variable for easier access
+                    var TargetHealth = document.getElementById("HealthBar"+(SelectedTarget+5)).value
+                    //declare enemie Name to smaller variable for easier access
+                    var TargetName = document.getElementById("NameContainer"+(SelectedTarget+5)).innerHTML;
+                    //clean up the variable for proper viewing
+                    TargetName = TargetName.replace("Name: ","")
+                    //check if the selected enemy stil has health remianing
+                    if(TargetHealth != 0){
+                        //deal damage to the selected enemy
+                        document.getElementById("HealthBar"+(SelectedTarget+5)).value -= i.Attack;
+                        //Display health numbers of the target
+                        document.getElementById("HealthContainer"+(SelectedTarget+5)).innerHTML = "Health: "+ document.getElementById("HealthBar"+(SelectedTarget+5)).value;
+                        //note down the action
+                        CombatAction = (MemberName+" Attacked "+TargetName+" for "+MemberDamage+" damage.<br>");
+                        //add the action to the Combat log
+                        CombatLog = CombatLog.concat(CombatAction);
+                        //set Target found to true to end the loop
+                        TargetFound = true;
+                    }
                 }
+            }
+            //if no enemie has health remaining, combat has ended.
+            else{
+                console.log("All Enemies are defeated");
+                BattleEnd("PartyVictory");
             }
         }
     });
-    //easy divider
+CombatLog= CombatLog.concat("-----------------------------------------<br>");
+
+    EnemiesToFight.forEach(i => {
+        //combine all party member values 
+        var CombinedPartyHealth = document.getElementById("HealthBar1").value + document.getElementById("HealthBar2").value + document.getElementById("HealthBar3").value + document.getElementById("HealthBar4").value;
+            if (CombinedPartyHealth > 0){
+                var TargetFound = false;
+                //get the name of the attacking enemy
+                var EnemyName = i.Name;
+                //remove unneeded markup from name
+                EnemyName = EnemyName.replace(/"/g,'');
+                //get Damage value of attacking enemy
+                var EnemyDamage = i.Attack;
+
+                while(TargetFound == false){
+                    //Select a random party member
+                    var SelectedTarget = Math.floor(Math.random() * (4));
+                    console.log(SelectedTarget)
+                    //declare party member health to smaller variable for easier access
+                    var TargetHealth = document.getElementById("HealthBar"+(SelectedTarget+1)).value
+                    //declare party member Name to smaller variable for easier access
+                    var TargetName = document.getElementById("NameContainer"+(SelectedTarget+1)).innerHTML;
+                    //clean up the variable for proper viewing
+                    TargetName = TargetName.replace("Name: ","");
+                    console.log( TargetHealth, TargetName);
+                    if(TargetHealth != 0){
+                        //deal damage to the selected party member
+                        document.getElementById("HealthBar"+(SelectedTarget+1)).value -= i.Attack;
+                        //Display health numbers of the target
+                        document.getElementById("HealthContainer"+(SelectedTarget+1)).innerHTML = "Health: "+ document.getElementById("HealthBar"+(SelectedTarget+1)).value;
+                        //note down the action
+                        CombatAction = (EnemyName+" Attacked "+TargetName+" for "+EnemyDamage+" damage.<br>");
+                        //add the action to the Combat log
+                        CombatLog = CombatLog.concat(CombatAction);
+                        //set Target found to true to end the loop
+                        TargetFound = true;
+                    }
+                }
+
+            }
+            else{
+                console.log("All party members have been defeated");
+                BattleEnd("EnemyVictory");
+            }
+    });
+
+    //easy divider in the console log
     console.log("End of turn-combat");
     //display Combat Log
     document.getElementById("EnemyCharacterDetails").innerHTML = CombatLog;
     //Empty combat log for next turn
     CombatLog = "";
+}
+function BattleEnd(BattleState){
+    if(BattleState === "PartyVictory"){
+        alert("You have Won");
+    };
+    if(BattleState === "EnemyVictory"){
+        alert("You have lost");
+    };
 }

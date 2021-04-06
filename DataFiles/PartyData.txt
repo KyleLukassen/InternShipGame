@@ -11,7 +11,7 @@
     },
     {
         "Name": "Racha-elle", 
-        "BattlePosition": null,
+        "BattlePosition": 1,
         "ActionPreference": "Support",
         "Level": 1,
         "Health": 35,

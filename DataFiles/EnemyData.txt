@@ -4,6 +4,8 @@
         "Level": 1,
         "Health": 10,
         "Mana": 15,
+        "Attack": 3,
+        "Defence": 2,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 1
     },
@@ -12,6 +14,8 @@
         "Level": 2,
         "Health": 15,
         "Mana": 25,
+        "Attack": 5,
+        "Defence": 4,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 2
     },
@@ -20,6 +24,8 @@
         "Level": 3,
         "Health": 70,
         "Mana": 15,
+        "Attack": 6,
+        "Defence": 10,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 3
     },
@@ -28,6 +34,8 @@
         "Level": 6,
         "Health": 50,
         "Mana": 50,
+        "Attack": 10,
+        "Defence": 7,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 4
     },
@@ -36,6 +44,8 @@
         "Level": 8,
         "Health": 45,
         "Mana": 160,
+        "Attack": 15,
+        "Defence": 9,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 5
     },
@@ -44,6 +54,8 @@
         "Level": 15,
         "Health": 125,
         "Mana": 225,
+        "Attack": 23,
+        "Defence": 20,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 6
     },
@@ -52,6 +64,8 @@
         "Level": 20,
         "Health": 150,
         "Mana": 350,
+        "Attack": 30,
+        "Defence": 45,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 7
     },
@@ -60,6 +74,8 @@
         "Level": 25,
         "Health": 240,
         "Mana": 280,
+        "Attack": 52,
+        "Defence": 37,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 8
     },
@@ -68,6 +84,8 @@
         "Level": 35,
         "Health": 575,
         "Mana": 275,
+        "Attack": 61,
+        "Defence": 55,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 9
     },
@@ -76,6 +94,8 @@
         "Level": 45,
         "Health": 750,
         "Mana": 450,
+        "Attack": 75,
+        "Defence": 60,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 10
     },
@@ -84,6 +104,8 @@
         "Level": 90,
         "Health": 2500,
         "Mana": 1250,
+        "Attack": 120,
+        "Defence": 150,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 11
     },
@@ -92,6 +114,8 @@
         "Level": 75,
         "Health": 1750,
         "Mana": 700,
+        "Attack": 90,
+        "Defence": 100,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 12
     },
@@ -100,6 +124,8 @@
         "Level": 60,
         "Health": 1500,
         "Mana": 600,
+        "Attack": 75,
+        "Defence": 80,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 13
     },
@@ -108,6 +134,8 @@
         "Level": 65,
         "Health": 1200,
         "Mana": 1200,
+        "Attack": 65,
+        "Defence": 85,
         "Icon": "./Images/Placeholder.png",
         "CodexEntry": 14
     }
