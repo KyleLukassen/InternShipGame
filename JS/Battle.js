@@ -15,6 +15,7 @@ var EnemyManaArray = ["ManaContainer5", "ManaContainer6", "ManaContainer7", "Man
 var EnemyManaBarArray = ["ManaBarContainer5", "ManaBarContainer6", "ManaBarContainer7", "ManaBarContainer8"];
 
 var CombatLog = "";
+var Battlefinished = false;
 
 function FileArrayRead(EnemyTextfile, PartyTextFile){
     //Start function to read Text file with Enemy data
@@ -136,7 +137,6 @@ function BattleScreenFillEnemy(EnemiesToFight){
 }
 
 function EndOfTurn(){
-    
     //go through each party member and deterine their actions for the turn.
     PartyArray.forEach( i => {
         // if the party member has a defined battle position they are in the fight and can perform an action
@@ -182,10 +182,11 @@ function EndOfTurn(){
             else{
                 console.log("All Enemies are defeated");
                 BattleEnd("PartyVictory");
+                return;
             }
         }
     });
-CombatLog= CombatLog.concat("-----------------------------------------<br>");
+CombatLog=CombatLog.concat("-----------------------------------------<br>");
 
     EnemiesToFight.forEach(i => {
         //combine all party member values 
@@ -228,9 +229,9 @@ CombatLog= CombatLog.concat("-----------------------------------------<br>");
             else{
                 console.log("All party members have been defeated");
                 BattleEnd("EnemyVictory");
+                
             }
     });
-
     //easy divider in the console log
     console.log("End of turn-combat");
     //display Combat Log
@@ -239,10 +240,14 @@ CombatLog= CombatLog.concat("-----------------------------------------<br>");
     CombatLog = "";
 }
 function BattleEnd(BattleState){
-    if(BattleState === "PartyVictory"){
-        alert("You have Won");
-    };
-    if(BattleState === "EnemyVictory"){
-        alert("You have lost");
+    if (Battlefinished == false){
+        if(BattleState === "PartyVictory"){
+            alert("You have Won");
+            Battlefinished = true;
+        };
+        if(BattleState === "EnemyVictory"){
+            alert("You have lost");
+            Battlefinished = true;
+        };
     };
 }

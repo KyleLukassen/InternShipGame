@@ -81,7 +81,6 @@
 </div>
 
 <div id="AllySummons">
-<progress  value="100" max="100" class="HealthBar" id="Test"></progress>
 </div>
 <div id="EnemySummons"></div>
 
