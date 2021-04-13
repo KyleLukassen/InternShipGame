@@ -85,7 +85,8 @@
 <div id="EnemySummons"></div>
 
 <div id="AllyCharacterDetails">
-<button onclick="EndOfTurn()"> End Turn</button>
+<button onclick="EndOfTurn()"> End Turn</button><br>
+<button onclick="EnemyLooting()">Loot Enemies</button>
 </div>
 <div id="EnemyCharacterDetails"></div>
 

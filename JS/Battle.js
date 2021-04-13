@@ -243,6 +243,7 @@ function BattleEnd(BattleState){
     if (Battlefinished == false){
         if(BattleState === "PartyVictory"){
             alert("You have Won");
+            EnemyLooting();
             Battlefinished = true;
         };
         if(BattleState === "EnemyVictory"){
@@ -250,4 +251,16 @@ function BattleEnd(BattleState){
             Battlefinished = true;
         };
     };
+}
+function EnemyLooting(){
+    //go through each enemie on the field
+    EnemiesToFight.forEach(i => {
+        //determine the chance for the first item
+        Item1Chance = Math.floor(Math.random() * 101);
+        //if Item1Chance is equal or lower than the dropchance of the item, determine how many needed to be added to the list.
+        if(Item1Chance <= i.DropItem1Chance){
+            
+        }
+        //determine the chance for the second item
+    });
 }
