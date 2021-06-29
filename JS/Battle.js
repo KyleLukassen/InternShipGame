@@ -137,7 +137,7 @@ function BattleScreenFillEnemy(EnemiesToFight){
 }
 
 function EndOfTurn(){
-    //go through each party member and deterine their actions for the turn.
+    //go through each party member and determine their actions for the turn.
     PartyArray.forEach( i => {
         // if the party member has a defined battle position they are in the fight and can perform an action
         if(i.BattlePosition != null){
@@ -182,7 +182,6 @@ function EndOfTurn(){
             else{
                 console.log("All Enemies are defeated");
                 BattleEnd("PartyVictory");
-                return;
             }
         }
     });
@@ -199,18 +198,15 @@ CombatLog=CombatLog.concat("-----------------------------------------<br>");
                 EnemyName = EnemyName.replace(/"/g,'');
                 //get Damage value of attacking enemy
                 var EnemyDamage = i.Attack;
-
                 while(TargetFound == false){
                     //Select a random party member
                     var SelectedTarget = Math.floor(Math.random() * (4));
-                    console.log(SelectedTarget)
                     //declare party member health to smaller variable for easier access
                     var TargetHealth = document.getElementById("HealthBar"+(SelectedTarget+1)).value
                     //declare party member Name to smaller variable for easier access
                     var TargetName = document.getElementById("NameContainer"+(SelectedTarget+1)).innerHTML;
                     //clean up the variable for proper viewing
                     TargetName = TargetName.replace("Name: ","");
-                    console.log( TargetHealth, TargetName);
                     if(TargetHealth != 0){
                         //deal damage to the selected party member
                         document.getElementById("HealthBar"+(SelectedTarget+1)).value -= i.Attack;
@@ -229,7 +225,6 @@ CombatLog=CombatLog.concat("-----------------------------------------<br>");
             else{
                 console.log("All party members have been defeated");
                 BattleEnd("EnemyVictory");
-                
             }
     });
     //easy divider in the console log
@@ -253,14 +248,67 @@ function BattleEnd(BattleState){
     };
 }
 function EnemyLooting(){
-    //go through each enemie on the field
+    var LootedItemsArray = [];
+    var ObtainedCoins = 0;
+    //go through each enemy on the field
     EnemiesToFight.forEach(i => {
         //determine the chance for the first item
-        Item1Chance = Math.floor(Math.random() * 101);
-        //if Item1Chance is equal or lower than the dropchance of the item, determine how many needed to be added to the list.
-        if(Item1Chance <= i.DropItem1Chance){
-            
+        ItemChance = Math.floor(Math.random() * 101);
+        //if ItemChance is equal or lower than the dropchance of the item, check how many are dropped and add it to the list
+        if(ItemChance <= i.DropItem1Chance){
+            //Set variable to the item
+            DroppedItem = i.DropItem1;
+            //set variable to the amount
+            //if drop multiplier is > 1, set dropped amount to a random amount with a 25% margin above the predetermined amount and 75% below the amount.
+            if (i.DropItem1Multiplier != 1){
+                //determine how much the amount chances
+                ItemAmountChange = Math.floor(Math.random() * ((i.DropItem1Multiplier*1.25) - (i.DropItem1Multiplier*0.25)) + (i.DropItem1Multiplier*0.25));
+                DroppedAmount = ItemAmountChange;
+                //if the dropped amount ends up being 0, set it to 1
+                if(DroppedAmount == 0){
+                    DroppedAmount = 1;
+                }
+            }
+            //If Drop multiplier is 1, leave it at 1
+            else{
+                DroppedAmount = i.DropItem1Multiplier;
+            }
+            //compact into single variable
+            LootedItem = {[DroppedItem]:DroppedAmount};
+            //Push to array
+            LootedItemsArray.push(LootedItem);
         }
         //determine the chance for the second item
+        ItemChance = Math.floor(Math.random() * 101);
+        //if ItemChance is equal or lower than the dropchance of the item, check how many are dropped and add it to the list
+        if(ItemChance <= i.DropItem2Chance){
+            //Set variable to the item
+            DroppedItem = i.DropItem2;
+            //set variable to the amount
+            //if drop multiplier is > 1, set dropped amount to a random amount with a 25% margin above the predetermined amount and 75% below the amount.
+            if (i.DropItem2Multiplier != 1){
+                //determine how much the amount chances
+                ItemAmountChange = Math.floor(Math.random() * ((i.DropItem2Multiplier*1.25) - (i.DropItem2Multiplier*0.25)) + (i.DropItem2Multiplier*0.25));
+                DroppedAmount = ItemAmountChange;
+                //if the dropped amount ends up being 0, set it to 1
+                if(DroppedAmount == 0){
+                    DroppedAmount = 1;
+                }
+            }
+            //If Drop multiplier is 1, leave it at 1
+            else{
+                DroppedAmount = i.DropItem2Multiplier;
+            }
+            //compact into single variable
+            LootedItem = {[DroppedItem]:DroppedAmount};
+            //Push to array
+            LootedItemsArray.push(LootedItem);
+        }
+        //obtain coins with a 50% margin below the predetermined value and 25% above the predetermined value
+        LootedCoins = Math.floor(Math.random() * ((i.Coin*1.25) - (i.Coin*0.50)) + (i.Coin*0.50));
+        ObtainedCoins = ObtainedCoins + LootedCoins;
     });
+    LootedItemsArray.push({Coin:ObtainedCoins});
+    console.log(LootedItemsArray);
+    SaveDataInventory(LootedItemsArray);
 }
